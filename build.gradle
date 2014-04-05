@@ -1,0 +1,44 @@
+apply plugin: 'kotlin'
+
+configurations {
+    compile
+}
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+    test.java.srcDirs += 'src/test/kotlin'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+version = '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax.mail:mail:1.4.7'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$ext.kotlin_version"
+    compile files('lib/subethasmtp_authpatch_gwc-3.1.7.1.jar')
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-all:1.9.5'
+}
+
+buildscript {
+    ext.kotlin_version = '0.7.270'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$ext.kotlin_version"
+    }
+}
+
+jar {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest {
+        attributes 'Main-Class': 'org.jtalks.pochta.PochtaPackage'
+    }
+}

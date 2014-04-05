@@ -8,7 +8,7 @@ It's like Russian Post Office (Pochta) - things get it, but they never get deliv
 Project has been just started. Justification: other public services (like Mailtrap) started to cost money which is bad for open source.
 
 ####Requirements
-- Should be a working SMPT server that can receive mails from applications.
+- Should be a working SMTP server that can receive mails from applications.
 - Should produce a `war` or `jar` file
 - Inboxes can be set in the configuration of the app (config depends on the binary type). Inbox has a name & password and a secret token.
 - When mail is sent with username/password, Pochta should receive the message and save it (in memory or on disk).
