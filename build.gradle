@@ -1,4 +1,5 @@
 apply plugin: 'kotlin'
+apply plugin: 'maven'
 
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
@@ -40,3 +41,15 @@ jar {
         attributes 'Main-Class': 'org.jtalks.pochta.PochtaPackage'
     }
 }
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://repo.jtalks.org/content/repositories/releases/")
+            pom.version = version
+            pom.artifactId = "jtalks-pochta"
+            pom.groupId = "org.jtalks"
+        }
+    }
+}
+
