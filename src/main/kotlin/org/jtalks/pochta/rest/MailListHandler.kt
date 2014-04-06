@@ -38,7 +38,7 @@ public class MailListHandler(val config: HttpConfig) : com.sun.net.httpserver.Ht
         result.put("envelope_from", session.envelopeFrom)
         result.put("envelope_recipients",
                 session.envelopeRecipients.fold (JSONArray(), {(array, address) -> array.add(address); array }))
-        result.put("delivery_date", session.receivedDate)
+        result.put("delivery_date", "${session.receivedDate}")
         result.put("sender_ip", session.ip)
         result.put("mail_body", session.getRawMessage())
         return result
