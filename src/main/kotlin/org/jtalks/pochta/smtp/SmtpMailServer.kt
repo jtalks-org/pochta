@@ -44,10 +44,10 @@ open class SmtpMailServer(val configuration: SmtpConfig) : SMTPServer(null), Mes
     }
 
     private fun setupStarttls() {
-        if (configuration.transportSecurity is SmtpConfig.TransportSecurity.STARTTLS_SUPPORTED) {
+        if (configuration.transportSecurity == SmtpConfig.TransportSecurity.STARTTLS_SUPPORTED) {
             setEnableTLS(true)
         }
-        if (configuration.transportSecurity is SmtpConfig.TransportSecurity.STARTTLS_ENFORCED) {
+        if (configuration.transportSecurity == SmtpConfig.TransportSecurity.STARTTLS_ENFORCED) {
             setEnableTLS(true)
             setRequireTLS(true)
         }
