@@ -9,7 +9,7 @@ import javax.net.ssl.SSLServerSocketFactory
  * TLS-secured SMTP server implementation.
  * It requires client connections to start with a handshake.
  */
-public class SmtpsMailServer(configuration: SmtpConfig) : SmtpMailServer(configuration){
+class SmtpsMailServer(configuration: SmtpConfig) : SmtpMailServer(configuration){
 
     {
         setEnableTLS(false); // disable STARTTLS, it makes no sense here

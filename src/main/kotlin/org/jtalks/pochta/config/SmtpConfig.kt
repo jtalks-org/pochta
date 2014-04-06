@@ -1,6 +1,9 @@
 package org.jtalks.pochta.config
 
-public class SmtpConfig {
+import java.util.Properties
+import org.jtalks.pochta.config.SmtpConfig.AuthType.ENFORCED
+
+public class SmtpConfig(props: Properties) {
 
     public enum class AuthType {
         DISABLED
@@ -16,9 +19,9 @@ public class SmtpConfig {
     }
 
     public val connectionTimeout : Int = 60000 // 1 minute
-    public var port: Int = 25;
-    public var authType: AuthType = AuthType.DISABLED;
+    public var port: Int = Integer.parseInt(props.getProperty("jtalks.pochta.smtp.port")!!);
+    public var authType: AuthType = AuthType.ENFORCED;
     public var transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT;
-    public var login: String = "";
-    public var password: String = "";
+    public var login: String = props.getProperty("jtalks.pochta.smtp.login")!!;
+    public var password: String = props.getProperty("jtalks.pochta.smtp.password")!!;
 }

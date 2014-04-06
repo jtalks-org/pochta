@@ -11,9 +11,10 @@ import org.jtalks.pochta.config.HttpConfig
      val server = com.sun.net.httpserver.HttpServer.create()!!
 
      fun start(config : HttpConfig){
-         server.bind(InetSocketAddress(8000), 0)
-         server.createContext("/test", HttpHandler(config))
+         server.bind(InetSocketAddress(config.port), 0)
+         server.createContext("/pochta/inbox/mail", MailListHandler(config))
          server.setExecutor(null) // creates a default executor
          server.start()
+         println("HTTP server listening on port ${config.port}")
      }
  }

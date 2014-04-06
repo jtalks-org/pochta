@@ -1,9 +1,5 @@
 apply plugin: 'kotlin'
 
-configurations {
-    compile
-}
-
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
     test.java.srcDirs += 'src/test/kotlin'
@@ -20,6 +16,8 @@ dependencies {
     compile 'javax.mail:mail:1.4.7'
     compile 'org.slf4j:slf4j-api:1.7.5'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$ext.kotlin_version"
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    compile 'org.slf4j:slf4j-nop:1.7.6'
     compile files('lib/subethasmtp_authpatch_gwc-3.1.7.1.jar')
 
     testCompile 'junit:junit:4.11'

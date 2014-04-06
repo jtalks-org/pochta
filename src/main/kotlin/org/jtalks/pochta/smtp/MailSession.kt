@@ -14,7 +14,7 @@ import org.jtalks.pochta.store.InboxFolder
 /**
  *
  */
-public class MailSession(val context: MessageContext?) : MessageHandler{
+public class MailSession(val context: MessageContext?) : MessageHandler {
 
     public var receivedDate: Date? = null
     public var envelopeFrom: String? = null

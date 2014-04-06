@@ -1,9 +1,11 @@
 package org.jtalks.pochta.config
 
+import java.util.Properties
+
 /**
  *
  */
-  public class Config{
-      val smtpConfig = SmtpConfig()
-      val httpConfig = HttpConfig()
+  public class Config(props : Properties){
+      val smtp: SmtpConfig = SmtpConfig(props)
+      val http: HttpConfig = HttpConfig(props)
   }

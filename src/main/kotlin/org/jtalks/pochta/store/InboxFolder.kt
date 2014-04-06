@@ -9,7 +9,7 @@ import java.util.Collections
  */
 public object InboxFolder {
 
-    public val mails: MutableList<MailSession> = ArrayList<MailSession>()
+    private val mails = ArrayList<MailSession>()
 
     public fun add(message: MailSession) {
         InboxFolder.mails.add(message)
