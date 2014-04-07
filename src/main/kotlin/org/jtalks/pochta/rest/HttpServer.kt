@@ -1,7 +1,7 @@
 package org.jtalks.pochta.rest
 
 import java.net.InetSocketAddress
-import org.jtalks.pochta.config.HttpConfig
+import org.jtalks.pochta.config.Config
 
 /**
  *
@@ -10,11 +10,15 @@ import org.jtalks.pochta.config.HttpConfig
 
      val server = com.sun.net.httpserver.HttpServer.create()!!
 
-     fun start(config : HttpConfig){
+     fun start(config : Config.Http){
          server.bind(InetSocketAddress(config.port), 0)
-         server.createContext("/pochta/inbox/mail", MailListHandler(config))
+         setupResourceHandlers(config)
          server.setExecutor(null) // creates a default executor
          server.start()
          println("HTTP server listening on port ${config.port}")
+     }
+
+     fun setupResourceHandlers(config : Config.Http){
+         server.createContext("/pochta/inbox/mail", MailListHandler(config))
      }
  }

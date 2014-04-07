@@ -9,10 +9,12 @@ import java.io.InputStream
 import javax.mail.Session
 import java.util.Properties
 import java.io.ByteArrayOutputStream
-import org.jtalks.pochta.store.InboxFolder
+import org.jtalks.pochta.store.Mailbox
 
 /**
- *
+ *  Represents a single mail transfer conversation. This includes email itself,
+ *  SMTP envelope information and client data (ip, etc). For every mail received
+ *  one MailSession object is created.
  */
 public class MailSession(val context: MessageContext?) : MessageHandler {
 
@@ -36,7 +38,7 @@ public class MailSession(val context: MessageContext?) : MessageHandler {
 
     override fun done() {
         receivedDate = Date()
-        InboxFolder.add(this)
+        Mailbox.add(this)
     }
 
     public fun getRawMessage(): String {
@@ -44,5 +46,4 @@ public class MailSession(val context: MessageContext?) : MessageHandler {
         message?.writeTo(stream)
         return String(stream.toByteArray())
     }
-
 }

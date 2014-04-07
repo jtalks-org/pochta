@@ -1,8 +1,6 @@
 package org.jtalks.pochta.smtp
 
-import org.jtalks.pochta.config.SmtpConfig
 import org.subethamail.smtp.server.SMTPServer
-import org.jtalks.pochta.smtp.Authenticator
 import org.subethamail.smtp.auth.EasyAuthenticationHandlerFactory
 import java.net.Socket
 import java.net.InetSocketAddress
@@ -11,6 +9,11 @@ import javax.net.ssl.SSLSocket
 import org.subethamail.smtp.MessageHandlerFactory
 import org.subethamail.smtp.MessageContext
 import org.subethamail.smtp.MessageHandler
+import org.subethamail.smtp.auth.UsernamePasswordValidator
+import org.subethamail.smtp.auth.LoginFailedException
+import org.jtalks.pochta.config.Config
+import org.jtalks.pochta.config.Config.Smtp.AuthType.*
+import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.*
 
 /**
  * SMTP mail server implementation.
@@ -18,48 +21,48 @@ import org.subethamail.smtp.MessageHandler
  * <p> Call start() to launch the server and start listening for connections
  * <p> Call stop() to disable the server (it's not supposed to be started again)
  */
-open class SmtpMailServer(val configuration: SmtpConfig) : SMTPServer(null), MessageHandlerFactory{
+open class SmtpMailServer(val configuration: Config.Smtp) : SMTPServer(null), MessageHandlerFactory {
 
     {
         setPort(configuration.port)
         setupAuthentication()
         setupStarttls()
-        setSoftwareName("Intellij Idea Server")
+        setSoftwareName("Pochta SMTP server")
         setMessageHandlerFactory(this)
-        /*
-         Disable "Received:" header construction. It involves network activity
-         and may take significant amount of time in some networks.
-         */
-        setDisableReceivedHeaders(true);
+        // Disable "Received:" header assembly. It involves DNS resolution and may take a lot of time
+        setDisableReceivedHeaders(true)
     }
 
     private fun setupAuthentication() {
-        if (configuration.authType != SmtpConfig.AuthType.DISABLED) {
-            val authenticator = Authenticator(configuration.login, configuration.password)
-            setAuthenticationHandlerFactory(EasyAuthenticationHandlerFactory(authenticator))
-            if (configuration.authType == SmtpConfig.AuthType.ENFORCED) {
+        if (configuration.authType != DISABLED) {
+            setAuthenticationHandlerFactory(EasyAuthenticationHandlerFactory(object: UsernamePasswordValidator {
+                override fun login(username: String?, password: String?): Unit =
+                        if (!configuration.login.equals(username) || !configuration.password.equals(password))
+                            throw LoginFailedException()
+            }))
+            if (configuration.authType == ENFORCED) {
                 setRequireAuth(true)
             }
         }
     }
 
     private fun setupStarttls() {
-        if (configuration.transportSecurity == SmtpConfig.TransportSecurity.STARTTLS_SUPPORTED) {
-            setEnableTLS(true)
-        }
-        if (configuration.transportSecurity == SmtpConfig.TransportSecurity.STARTTLS_ENFORCED) {
-            setEnableTLS(true)
-            setRequireTLS(true)
+        when (configuration.transportSecurity) {
+            STARTTLS_SUPPORTED -> setEnableTLS(true)
+            STARTTLS_ENFORCED -> {
+                setEnableTLS(true)
+                setRequireTLS(true)
+            }
         }
     }
 
-    public override fun createSSLSocket(socket : Socket?) : SSLSocket {
-        val remoteAddress =  socket!!.getRemoteSocketAddress() as InetSocketAddress
+    public override fun createSSLSocket(socket: Socket?): SSLSocket {
+        val remoteAddress = socket!!.getRemoteSocketAddress() as InetSocketAddress
         val sf = SSLSocketFactory.getDefault() as SSLSocketFactory
         val s = sf.createSocket(socket, remoteAddress.getHostName(), socket.getPort(), true) as SSLSocket
         // we are the server
-        s.setUseClientMode(false);
-        return s;
+        s.setUseClientMode(false)
+        return s
     }
 
     /**
