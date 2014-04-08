@@ -1,15 +1,15 @@
 package org.jtalks.pochta.smtp
 
 import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.SSL
-import org.jtalks.pochta.config.ConfigFactory
+import org.jtalks.pochta.config.ConfigLoader
 
 /**
  *
  */
 public object SmtpServer {
 
-    public fun start() {
-        val config = ConfigFactory.config!!;
+    {
+        val config = ConfigLoader.config;
         if (config.smtp.transportSecurity == SSL) {
             SmtpsMailServer(config).start()
         } else {

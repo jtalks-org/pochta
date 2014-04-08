@@ -3,8 +3,8 @@ package org.jtalks.pochta.store
 import org.jtalks.pochta.smtp.MailSession
 import java.util.concurrent.ArrayBlockingQueue
 import java.util.HashMap
-import org.jtalks.pochta.config.ConfigFactory
 import org.jtalks.pochta.util.Context
+import org.jtalks.pochta.config.ConfigLoader
 
 /**
  * Mailbox is an incoming mail in-memory storage. Each mailbox has
@@ -13,11 +13,15 @@ import org.jtalks.pochta.util.Context
  */
 object Mailboxes {
 
-    private val mailboxes = HashMap<String, Mailbox>()
+    private val mailboxes: Map<String, Mailbox>;
 
-    public fun configure() {
-        val config = ConfigFactory.config!!.mailboxes
-        config.forEach {(mbox) -> mailboxes.put(mbox.password, Mailbox(mbox.size)) }
+    {
+        val mboxes = HashMap<String, Mailbox>();
+        val config = ConfigLoader.config.mailboxes
+        config.forEach {(mbox) ->
+            mboxes.put(mbox.password, Mailbox(mbox.size)
+            ) }
+        mailboxes = mboxes
     }
 
     public fun byContextPassword(): Mailbox? = mailboxes.get(Context.get(Context.PASSWORD))
