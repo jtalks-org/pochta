@@ -9,7 +9,7 @@ import java.io.InputStream
 import javax.mail.Session
 import java.util.Properties
 import java.io.ByteArrayOutputStream
-import org.jtalks.pochta.store.Mailbox
+import org.jtalks.pochta.store.Mailboxes
 
 /**
  *  Represents a single mail transfer conversation. This includes email itself,
@@ -38,7 +38,7 @@ public class MailSession(val context: MessageContext?) : MessageHandler {
 
     override fun done() {
         receivedDate = Date()
-        Mailbox.add(this)
+        Mailboxes.byContextPassword()?.add(this)
     }
 
     public fun getRawMessage(): String {

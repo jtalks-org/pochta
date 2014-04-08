@@ -10,7 +10,11 @@ import java.io.FileReader
  */
 public object ConfigFactory {
 
-    public fun createConfig(cmdLineArgs: Array<String>): Config = Config(loadProperties(cmdLineArgs))
+    public var config: Config? = null;
+
+    public fun initConfig(cmdLineArgs: Array<String>): Unit {
+        config = Config(loadProperties(cmdLineArgs))
+    }
 
     private fun loadProperties(cmdLineArgs: Array<String>): Properties {
         val defaultStream = javaClass.getResourceAsStream("default.properties")

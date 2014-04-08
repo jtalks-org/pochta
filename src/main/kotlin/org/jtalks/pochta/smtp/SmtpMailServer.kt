@@ -1,7 +1,6 @@
 package org.jtalks.pochta.smtp
 
 import org.subethamail.smtp.server.SMTPServer
-import org.subethamail.smtp.auth.EasyAuthenticationHandlerFactory
 import java.net.Socket
 import java.net.InetSocketAddress
 import javax.net.ssl.SSLSocketFactory
@@ -9,8 +8,6 @@ import javax.net.ssl.SSLSocket
 import org.subethamail.smtp.MessageHandlerFactory
 import org.subethamail.smtp.MessageContext
 import org.subethamail.smtp.MessageHandler
-import org.subethamail.smtp.auth.UsernamePasswordValidator
-import org.subethamail.smtp.auth.LoginFailedException
 import org.jtalks.pochta.config.Config
 import org.jtalks.pochta.config.Config.Smtp.AuthType.*
 import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.*
@@ -21,10 +18,10 @@ import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.*
  * <p> Call start() to launch the server and start listening for connections
  * <p> Call stop() to disable the server (it's not supposed to be started again)
  */
-open class SmtpMailServer(val configuration: Config.Smtp) : SMTPServer(null), MessageHandlerFactory {
+open class SmtpMailServer(val config: Config) : SMTPServer(null), MessageHandlerFactory {
 
     {
-        setPort(configuration.port)
+        setPort(config.smtp.port)
         setupAuthentication()
         setupStarttls()
         setSoftwareName("Pochta SMTP server")
@@ -34,20 +31,16 @@ open class SmtpMailServer(val configuration: Config.Smtp) : SMTPServer(null), Me
     }
 
     private fun setupAuthentication() {
-        if (configuration.authType != DISABLED) {
-            setAuthenticationHandlerFactory(EasyAuthenticationHandlerFactory(object: UsernamePasswordValidator {
-                override fun login(username: String?, password: String?): Unit =
-                        if (!configuration.login.equals(username) || !configuration.password.equals(password))
-                            throw LoginFailedException()
-            }))
-            if (configuration.authType == ENFORCED) {
+        if (config.smtp.authType != DISABLED) {
+            setAuthenticationHandlerFactory(AuthenticatorFactory(config.mailboxes))
+            if (config.smtp.authType == ENFORCED) {
                 setRequireAuth(true)
             }
         }
     }
 
     private fun setupStarttls() {
-        when (configuration.transportSecurity) {
+        when (config.smtp.transportSecurity) {
             STARTTLS_SUPPORTED -> setEnableTLS(true)
             STARTTLS_ENFORCED -> {
                 setEnableTLS(true)

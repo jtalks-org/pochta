@@ -2,18 +2,19 @@ package org.jtalks.pochta
 
 import org.jtalks.pochta.config.ConfigFactory
 import org.jtalks.pochta.rest.HttpServer
-import org.jtalks.pochta.store.Mailbox
 import org.jtalks.pochta.smtp.SmtpServer
+import org.jtalks.pochta.store.Mailboxes
 
 
 /**
  *
  */
 fun main(args: Array<String>): Unit {
-    val config = ConfigFactory.createConfig(args)
     println("Starting Pochta service...")
-    Mailbox.configure(config.smtp)
-    SmtpServer.start(config.smtp)
-    HttpServer.start(config.http)
+    ConfigFactory.initConfig(args)
+    println("Configuration initialized")
+    Mailboxes.configure()
+    SmtpServer.start()
+    HttpServer.start()
     println("Ready to rumble!")
 }

@@ -1,6 +1,7 @@
 package org.jtalks.pochta.config
 
 import java.util.Properties
+import java.util.ArrayList
 
 /**
  *
@@ -9,10 +10,10 @@ public class Config(props: Properties) {
 
     val smtp: Smtp = Smtp(props)
     val http: Http = Http(props)
+    val mailboxes: Mailboxes = Mailboxes(props)
 
     class Http(props: Properties) {
         public val port: Int = Integer.parseInt(props.getProperty("jtalks.pochta.http.port")!!)
-        public val secretToken: String = props.getProperty("jtalks.pochta.http.token")!!
     }
 
     class Smtp(props: Properties) {
@@ -31,11 +32,30 @@ public class Config(props: Properties) {
         }
 
         public val connectionTimeout: Int = 60000 // 1 minute
-        public var port: Int = Integer.parseInt(props.getProperty("jtalks.pochta.smtp.port")!!)
-        public var authType: AuthType = AuthType.ENFORCED
-        public var transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
-        public var login: String = props.getProperty("jtalks.pochta.smtp.login")!!
-        public var password: String = props.getProperty("jtalks.pochta.smtp.password")!!
-        public var mailboxLimit: Int = Integer.parseInt(props.getProperty("jtalks.pochta.smtp.inboxLimit")!!)
+        public val port: Int = Integer.parseInt(props.getProperty("jtalks.pochta.smtp.port")!!)
+        public val authType: AuthType = AuthType.ENFORCED
+        public val transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
+    }
+
+    class Mailbox(val login: String, val password: String, val size: Int)
+
+    class Mailboxes(props: Properties) : Iterable<Mailbox> {
+
+        private val mailboxes = ArrayList<Mailbox>();
+
+        {
+            props.getProperty("jtalks.pochta.mailboxes")?.split(" ")?.forEach {(mbox) ->
+                val login = props.getProperty("jtalks.pochta.mailbox.$mbox.login")
+                val password = props.getProperty("jtalks.pochta.mailbox.$mbox.password")
+                val size = props.getProperty("jtalks.pochta.mailbox.$mbox.size")
+                if (login != null && password != null && size != null) {
+                    mailboxes.add(Mailbox(login, password, Integer.parseInt(size)))
+                }
+            }
+        }
+
+
+
+        override fun iterator(): Iterator<Mailbox> = mailboxes.iterator()
     }
 }

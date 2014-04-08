@@ -3,30 +3,22 @@ package org.jtalks.pochta.rest
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.smtp.MailSession
 import org.json.simple.JSONObject
-import org.json.simple.JSONArray
-import org.jtalks.pochta.store.Mailbox
 import org.jtalks.pochta.config.Config
+import org.jtalks.pochta.store.Mailboxes
+import org.jtalks.pochta.util.Context
 
 /**
  *  Forms JSON list from all known mails in a mailbox. TO access this REST resource
  *  client must provide a configurable secret token as a query parameter
  */
-class MailListHandler(val config: Config.Http) : com.sun.net.httpserver.HttpHandler {
+class MailListHandler(val config: Config.Http) : Handler {
 
-    override fun handle(exchange: HttpExchange?) {
-        if (exchange?.getRequestURI().toString().endsWith(config.secretToken)) {
-            val response = getMailListJson()
-            exchange?.sendResponseHeaders(200, response.getBytes("UTF-8").size.toLong())
-            val os = exchange?.getResponseBody()
-            os?.write(response.getBytes())
-            os?.close()
-        } else {
-            exchange?.sendResponseHeaders(403, 0)
-            exchange?.close()
-        }
+    override fun process(exchange: HttpExchange) {
+        exchange.writeResponse(200, getMailListJson())
     }
 
-    private fun getMailListJson(): String = Mailbox.map({(e) -> asJson(e) }).asJsonArray().toString()
+    private fun getMailListJson(): String =
+            Mailboxes.byContextPassword()?.map({(e) -> asJson(e) })?.asJsonArray().toString()
 
     private fun asJson(session: MailSession): JSONObject {
         val result = JSONObject()
@@ -36,9 +28,5 @@ class MailListHandler(val config: Config.Http) : com.sun.net.httpserver.HttpHand
         result.put("sender_ip", session.ip)
         result.put("mail_body", session.getRawMessage())
         return result
-    }
-
-    private fun <T> Iterable<T>.asJsonArray(): JSONArray {
-        return this.fold(JSONArray(), {(array, address) -> array.add(address); array })
     }
 }

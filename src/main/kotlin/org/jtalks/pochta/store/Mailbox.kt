@@ -2,26 +2,34 @@ package org.jtalks.pochta.store
 
 import org.jtalks.pochta.smtp.MailSession
 import java.util.concurrent.ArrayBlockingQueue
-import org.jtalks.pochta.config.Config
+import java.util.HashMap
+import org.jtalks.pochta.config.ConfigFactory
+import org.jtalks.pochta.util.Context
 
 /**
- * Mailbox is an incoming mail in-memory storage. Each folder has a limit
- * on how many mails it can hold. When overflowed folder acts like FIFO-cache;
- * oldest entries are removed.
+ * Mailbox is an incoming mail in-memory storage. Each mailbox has
+ * a limit on how many mails it can hold. When overflowed mailbox
+ * acts like FIFO-cache: oldest entries are removed first.
  */
-public object Mailbox : Iterable<MailSession> {
+object Mailboxes {
 
-    private var mails = ArrayBlockingQueue<MailSession>(500)
+    private val mailboxes = HashMap<String, Mailbox>()
 
-    public fun configure(config : Config.Smtp) {
-        mails = ArrayBlockingQueue<MailSession>(config.mailboxLimit)
+    public fun configure() {
+        val config = ConfigFactory.config!!.mailboxes
+        config.forEach {(mbox) -> mailboxes.put(mbox.password, Mailbox(mbox.size)) }
     }
+
+    public fun byContextPassword(): Mailbox? = mailboxes.get(Context.get(Context.PASSWORD))
+}
+
+class Mailbox(size: Int) : Iterable<MailSession> {
+
+    private val mails = ArrayBlockingQueue<MailSession>(size)
 
     public fun add(message: MailSession) {
         synchronized(mails) {
-            if (mails.remainingCapacity() == 0) {
-                mails.take()
-            }
+            if (mails.remainingCapacity() == 0) mails.take()
             mails.add(message)
         }
     }

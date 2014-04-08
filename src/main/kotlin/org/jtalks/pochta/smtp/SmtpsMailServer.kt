@@ -9,7 +9,7 @@ import org.jtalks.pochta.config.Config
  * TLS-secured SMTP server implementation.
  * It requires client connections to start with a handshake.
  */
-class SmtpsMailServer(configuration: Config.Smtp) : SmtpMailServer(configuration){
+class SmtpsMailServer(configuration: Config) : SmtpMailServer(configuration){
 
     {
         setEnableTLS(false) // disable STARTTLS, it makes no sense here
