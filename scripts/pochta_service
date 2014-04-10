@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Pochta mail trap service
+# description: Service script to be placed in /etc/init.d
+#
+case $1 in
+    start)
+        # don't forget to put your specific path to pochta.jar here
+        java -jar /usr/bin/pochta.jar
+    ;;
+    stop)
+        pid=`ps aux | grep pochta | awk '{print $2}'`
+        kill -9 $pid
+    ;;
+esac
+exit 0
