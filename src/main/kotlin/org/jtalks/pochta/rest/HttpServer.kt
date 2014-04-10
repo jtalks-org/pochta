@@ -2,7 +2,7 @@ package org.jtalks.pochta.rest
 
 import java.net.InetSocketAddress
 import org.jtalks.pochta.config.Config
-import org.jtalks.pochta.config.ConfigFactory
+import org.jtalks.pochta.config.ConfigLoader
 
 /**
  *
@@ -11,8 +11,8 @@ import org.jtalks.pochta.config.ConfigFactory
 
      val server = com.sun.net.httpserver.HttpServer.create()!!
 
-     fun start(){
-         val config = ConfigFactory.config!!;
+     {
+         val config = ConfigLoader.config;
          server.bind(InetSocketAddress(config.http.port), 0)
          setupResourceHandlers(config.http)
          server.setExecutor(null) // creates a default executor
