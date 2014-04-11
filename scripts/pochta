@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# description: Pochta mail trap service
+#
+# usage:
+# 1. change pochta.jar location below to point on your Pochta installation
+# 2. place this script in /etc/init.d
+# 3. call 'sudo update-rc.d pochta defalult' to bind the service to an appropriate run level
+# 4. service is installed, you can control it with 'service pochta start | stop'
+#
+case $1 in
+    start)
+        echo 'starting Pochta service...'
+        # don't forget to put your specific path to pochta.jar here
+        java -jar /usr/bin/pochta.jar &
+    ;;
+    stop)
+        echo 'stopping Pochta service...'
+        pid=`ps aux | grep pochta | awk '{print $2}'`
+        kill -9 $pid
+    ;;
+esac
+exit 0
