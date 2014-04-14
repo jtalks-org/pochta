@@ -1,13 +1,11 @@
-package org.jtalks.pochta.rest
+package org.jtalks.pochta.http
 
 import com.sun.net.httpserver.HttpExchange
 import java.nio.charset.StandardCharsets
-import org.json.simple.JSONArray
 
 /**
- * Extension functions to ease rest data output
+ *  Extension functions to ease http response output
  */
-
 fun HttpExchange.writeResponse(code: Int, content: String) {
     val charset = StandardCharsets.UTF_8
     sendResponseHeaders(code, content.getBytes(charset).size.toLong())
@@ -19,8 +17,4 @@ fun HttpExchange.writeResponse(code: Int, content: String) {
 fun HttpExchange.writeResponse(code: Int) {
     sendResponseHeaders(code, 0)
     close()
-}
-
-fun <T> Iterable<T>.asJsonArray(): JSONArray {
-    return this.fold(JSONArray(), {(array, address) -> array.add(address); array })
 }

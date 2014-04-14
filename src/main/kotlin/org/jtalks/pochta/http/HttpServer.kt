@@ -1,4 +1,4 @@
-package org.jtalks.pochta.rest
+package org.jtalks.pochta.http
 
 import java.net.InetSocketAddress
 import org.jtalks.pochta.config.Config
@@ -14,13 +14,14 @@ import org.jtalks.pochta.config.ConfigLoader
      {
          val config = ConfigLoader.config;
          server.bind(InetSocketAddress(config.http.port), 0)
-         setupResourceHandlers(config.http)
+         setupResourceHandlers()
          server.setExecutor(null) // creates a default executor
          server.start()
          println("HTTP server listening on port ${config.http.port}")
      }
 
-     fun setupResourceHandlers(config : Config.Http){
-         server.createContext("/pochta/inbox/mail", MailListHandler(config))
+     fun setupResourceHandlers(){
+         server.createContext("/pochta/inbox/mail", MailListHandler())
+         server.createContext("/", MailListHandler())
      }
  }

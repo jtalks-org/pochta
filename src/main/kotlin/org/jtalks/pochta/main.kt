@@ -1,7 +1,7 @@
 package org.jtalks.pochta
 
 import org.jtalks.pochta.config.ConfigLoader
-import org.jtalks.pochta.rest.HttpServer
+import org.jtalks.pochta.http.HttpServer
 import org.jtalks.pochta.smtp.SmtpServer
 import org.jtalks.pochta.store.Mailboxes
 

@@ -1,19 +1,19 @@
-package org.jtalks.pochta.rest
+package org.jtalks.pochta.http
 
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.smtp.MailSession
 import org.json.simple.JSONObject
 import org.jtalks.pochta.config.Config
 import org.jtalks.pochta.store.Mailboxes
-import org.jtalks.pochta.util.Context
+import com.sun.net.httpserver.HttpHandler
 
 /**
  *  Forms JSON list from all known mails in a mailbox. TO access this REST resource
  *  client must provide a configurable secret token as a query parameter
  */
-class MailListHandler(val config: Config.Http) : Handler {
+class MailListHandler() : TokenAuthenticatedHandler {
 
-    override fun process(exchange: HttpExchange) {
+    override fun handleRequest(exchange: HttpExchange) {
         exchange.writeResponse(200, getMailListJson())
     }
 
