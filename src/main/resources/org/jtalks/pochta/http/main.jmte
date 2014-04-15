@@ -1,0 +1,28 @@
+<h2>About the service</h2>
+
+<p class="lead muted">
+    Pochta service is a dedicated mail testing tool. Pochta collects all the mails sent and
+    offers message data as JSON. Any automated functional test can collect this data later
+    to check if e-mail meets certain expectations.
+</p>
+<br>
+<h2>Available mailboxes</h2>
+<br>
+<table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+        <th>Mailbox name</th>
+        <th>Messages available</th>
+        <th>JSON data</th>
+    </tr>
+    </thead>
+    <tbody>
+    ${foreach mailboxes mbox}
+    <tr>
+        <td>${mbox.config.login}</td>
+        <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
+        <td><a href="/inboxes/${mbox.config.login}?token=">Click fo fetch</a></td>
+    </tr>
+    ${end}
+    </tbody>
+</table>

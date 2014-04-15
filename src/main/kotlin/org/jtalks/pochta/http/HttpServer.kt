@@ -1,7 +1,6 @@
 package org.jtalks.pochta.http
 
 import java.net.InetSocketAddress
-import org.jtalks.pochta.config.Config
 import org.jtalks.pochta.config.ConfigLoader
 
 /**
@@ -21,7 +20,7 @@ import org.jtalks.pochta.config.ConfigLoader
      }
 
      fun setupResourceHandlers(){
-         server.createContext("/pochta/inbox/mail", MailListHandler())
-         server.createContext("/", MailListHandler())
+         server.createContext("/inboxes/", MailListHandler())
+         server.createContext("/", MainPageHandler())
      }
  }

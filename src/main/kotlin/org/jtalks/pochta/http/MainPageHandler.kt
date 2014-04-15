@@ -2,13 +2,21 @@ package org.jtalks.pochta.http
 
 import com.sun.net.httpserver.HttpHandler
 import com.sun.net.httpserver.HttpExchange
+import org.jtalks.pochta.config.ConfigLoader
+import org.jtalks.pochta.store.Mailboxes
 
 /**
  *
  */
-class MainPageHandler : HttpHandler{
+class MainPageHandler : HttpHandler {
 
     override fun handle(exchange: HttpExchange?) {
-        throw UnsupportedOperationException()
+        exchange?.writeResponse(200,
+                ModelAndView("main")
+                        .put("smtpPort", ConfigLoader.config.smtp.port)
+                        .put("httpPort", ConfigLoader.config.http.port)
+                        .put("mailboxes", Mailboxes)
+                        .renderWithCommonPageTemplate("Pochta service")
+        )
     }
 }

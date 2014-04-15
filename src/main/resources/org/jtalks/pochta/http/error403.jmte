@@ -1,3 +1,7 @@
-<p>Rest access token is missing or invalid. Make sure your HTTP request has ?token=&lt;password&gt;
-<p> parameter specified, it should match mailbox password.
-<p>For additional information please refer to <a href='https://github.com/jtalks-org/pochta'>Pochta project site</a>.
+<h2>Not authenticated</h2>
+
+<p class="lead muted">
+    Rest access token is missing or invalid. Make sure your HTTP request has <nobr>?token=&lt;password&gt;</nobr>
+    parameter specified, it should match mailbox password. For additional information please refer to
+    <a href='https://github.com/jtalks-org/pochta'>Pochta project site</a>.
+</p>

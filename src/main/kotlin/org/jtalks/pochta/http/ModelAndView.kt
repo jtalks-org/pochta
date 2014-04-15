@@ -13,20 +13,22 @@ class ModelAndView(val view: String) {
 
     private val map = HashMap<String, Any>()
 
-    fun put(key: String, value: Any) = map.put(key, value)
+    fun put(key: String, value: Any): ModelAndView {
+        map.put(key, value);
+        return this
+    }
 
     fun render(): String {
         return RenderingEngine.render(readTemplate(view), map)
     }
 
-    fun renderWithCommonPageTemplate(title: String) : String {
-        val map = HashMap<String, Any>()
+    fun renderWithCommonPageTemplate(title: String): String {
         map.put("title", title)
         map.put("body", render())
         return RenderingEngine.render(readTemplate("pageTemplate"), map)
     }
 
-    private fun readTemplate(name : String) : String {
+    private fun readTemplate(name: String): String {
         val file = "$name.jmte"
         val stream = javaClass.getResourceAsStream(file)
         val reader = BufferedReader(InputStreamReader(stream!!, StandardCharsets.UTF_8))

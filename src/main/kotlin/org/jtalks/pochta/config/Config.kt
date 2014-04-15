@@ -37,11 +37,11 @@ public class Config(props: Properties) {
         public val transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
     }
 
-    class Mailbox(val login: String, val password: String, val size: Int)
+    class MailboxConfig(val login: String, val password: String, val size: Int)
 
-    class Mailboxes(props: Properties) : Iterable<Mailbox> {
+    class Mailboxes(props: Properties) : Iterable<MailboxConfig> {
 
-        private val mailboxes = ArrayList<Mailbox>();
+        private val mailboxes = ArrayList<MailboxConfig>();
 
         {
             props.getProperty("jtalks.pochta.mailboxes")?.split(" ")?.forEach {(mbox) ->
@@ -49,13 +49,13 @@ public class Config(props: Properties) {
                 val password = props.getProperty("jtalks.pochta.mailbox.$mbox.password")
                 val size = props.getProperty("jtalks.pochta.mailbox.$mbox.size")
                 if (login != null && password != null && size != null) {
-                    mailboxes.add(Mailbox(login, password, Integer.parseInt(size)))
+                    mailboxes.add(MailboxConfig(login, password, Integer.parseInt(size)))
                 }
             }
         }
 
 
 
-        override fun iterator(): Iterator<Mailbox> = mailboxes.iterator()
+        override fun iterator(): Iterator<MailboxConfig> = mailboxes.iterator()
     }
 }
