@@ -21,7 +21,7 @@
     <tr>
         <td>${mbox.config.login}</td>
         <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
-        <td><a href="/inboxes/${mbox.config.login}?token=">Click fo fetch</a></td>
+        <td><a href="/inboxes/${mbox.config.loginEscaped}?token=">Click fo fetch</a></td>
     </tr>
     ${end}
     </tbody>

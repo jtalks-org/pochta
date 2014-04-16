@@ -2,6 +2,8 @@ package org.jtalks.pochta.config
 
 import java.util.Properties
 import java.util.ArrayList
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
 
 /**
  *
@@ -13,7 +15,7 @@ public class Config(props: Properties) {
     val mailboxes: Mailboxes = Mailboxes(props)
 
     class Http(props: Properties) {
-        public val port: Int = Integer.parseInt(props.getProperty("jtalks.pochta.http.port")!!)
+        public val port: Int = props.getInt("jtalks.pochta.http.port")
     }
 
     class Smtp(props: Properties) {
@@ -32,28 +34,27 @@ public class Config(props: Properties) {
         }
 
         public val connectionTimeout: Int = 60000 // 1 minute
-        public val port: Int = Integer.parseInt(props.getProperty("jtalks.pochta.smtp.port")!!)
+        public val port: Int = props.getInt("jtalks.pochta.smtp.port")
         public val authType: AuthType = AuthType.ENFORCED
         public val transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
     }
 
-    class MailboxConfig(val login: String, val password: String, val size: Int)
+    class MailboxConfig(val login: String, val password: String, val size: Int) {
+        val loginEscaped = URLEncoder.encode(login, StandardCharsets.UTF_8.toString())
+    }
 
     class Mailboxes(props: Properties) : Iterable<MailboxConfig> {
 
         private val mailboxes = ArrayList<MailboxConfig>();
 
         {
-            props.getProperty("jtalks.pochta.mailboxes")?.split(" ")?.forEach {(mbox) ->
-                val login = props.getProperty("jtalks.pochta.mailbox.$mbox.login")
-                val password = props.getProperty("jtalks.pochta.mailbox.$mbox.password")
-                val size = props.getProperty("jtalks.pochta.mailbox.$mbox.size")
-                if (login != null && password != null && size != null) {
-                    mailboxes.add(MailboxConfig(login, password, Integer.parseInt(size)))
-                }
+            props.getString("jtalks.pochta.mailboxes").split(" ").forEach {(mbox) ->
+                val login = props.getString("jtalks.pochta.mailbox.$mbox.login")
+                val password = props.getString("jtalks.pochta.mailbox.$mbox.password")
+                val size = props.getString("jtalks.pochta.mailbox.$mbox.size")
+                mailboxes.add(MailboxConfig(login, password, Integer.parseInt(size)))
             }
         }
-
 
 
         override fun iterator(): Iterator<MailboxConfig> = mailboxes.iterator()
