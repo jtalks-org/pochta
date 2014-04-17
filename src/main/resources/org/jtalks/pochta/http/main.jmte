@@ -11,7 +11,9 @@
 <table class="table table-striped table-hover ">
     <thead>
     <tr>
-        <th>Mailbox name</th>
+        <th>#</th>
+        <th>Name</th>
+        <th>Login</th>
         <th>Messages available</th>
         <th>JSON data</th>
     </tr>
@@ -19,6 +21,8 @@
     <tbody>
     ${foreach mailboxes mbox}
     <tr>
+        <td>${mbox.config.id}</td>
+        <td>${mbox.config.name}</td>
         <td>${mbox.config.login}</td>
         <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
         <td><a href="/inboxes/${mbox.config.loginEscaped}?token=">Click fo fetch</a></td>

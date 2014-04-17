@@ -8,7 +8,7 @@ import org.jtalks.pochta.store.Mailboxes
 /**
  *
  */
-class MainPageHandler : HttpHandler {
+object MainPageHandler : HttpHandler {
 
     override fun handle(exchange: HttpExchange?) {
         exchange?.writeResponse(200,

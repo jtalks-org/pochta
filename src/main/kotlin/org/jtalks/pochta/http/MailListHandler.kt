@@ -11,7 +11,7 @@ import com.sun.net.httpserver.HttpHandler
  *  Forms JSON list from all known mails in a mailbox. TO access this REST resource
  *  client must provide a configurable secret token as a query parameter
  */
-class MailListHandler() : TokenAuthenticatedHandler {
+object MailListHandler : TokenAuthenticatedHandler {
 
     override fun handleRequest(exchange: HttpExchange) {
         exchange.writeResponse(200, getMailListJson())

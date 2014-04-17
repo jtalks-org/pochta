@@ -23,6 +23,7 @@ dependencies {
     compile 'com.googlecode.json-simple:json-simple:1.1.1'
     compile 'org.slf4j:slf4j-nop:1.7.6'
     compile 'com.floreysoft:jmte:3.0'
+    compile 'org.apache.commons:commons-io:1.3.2'
     compile files('lib/subethasmtp_authpatch_gwc-3.1.7.1.jar')
 
     testCompile 'junit:junit:4.11'

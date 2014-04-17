@@ -39,7 +39,7 @@ public class Config(props: Properties) {
         public val transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
     }
 
-    class MailboxConfig(val login: String, val password: String, val size: Int) {
+    class MailboxConfig(val id: Int, val name : String, val login: String, val password: String, val size: Int) {
         val loginEscaped = URLEncoder.encode(login, StandardCharsets.UTF_8.toString())
     }
 
@@ -48,11 +48,12 @@ public class Config(props: Properties) {
         private val mailboxes = ArrayList<MailboxConfig>();
 
         {
+            var i = 1;
             props.getString("jtalks.pochta.mailboxes").split(" ").forEach {(mbox) ->
                 val login = props.getString("jtalks.pochta.mailbox.$mbox.login")
                 val password = props.getString("jtalks.pochta.mailbox.$mbox.password")
                 val size = props.getString("jtalks.pochta.mailbox.$mbox.size")
-                mailboxes.add(MailboxConfig(login, password, Integer.parseInt(size)))
+                mailboxes.add(MailboxConfig(i++, mbox, login, password, Integer.parseInt(size)))
             }
         }
 

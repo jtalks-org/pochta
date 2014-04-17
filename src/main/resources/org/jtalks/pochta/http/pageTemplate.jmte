@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet"
+    <link href="/css/bootstrap.min.css" media="all" rel="stylesheet"
           type="text/css"/>
     <title>${title}</title>
 </head>
@@ -29,26 +29,20 @@
     .muted {
         color: #bbb;
     }
+
+    .img-cat {
+        padding-top: 100px;
+    }
+
+    .navbar-header {
+        padding-left: 50px;
+    }
 </style>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-11">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">Pochta Mail Service</a>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a>
-                        <i class="glyphicon glyphicon-envelope"></i>
-                        SMTP port <b>${smtpPort}</b>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="glyphicon glyphicon-globe"></i>
-                        HTTP port <b>${httpPort}</b>
-                    </a>
-                </li>
-            </ul>
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
@@ -62,13 +56,53 @@
 <br><br><br>
 
 <div class="container">
-    <div class="col-md-8 col-md-offset-2">
-       ${body}
+    <div class="col-md-3">
+        <br>
+
+        <h3>Server status</h3>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td><i class="glyphicon glyphicon-envelope"></i></td>
+                <td>SMTP port</td>
+                <td><b>${smtpPort}</b></td>
+            </tr>
+            <tr>
+                <td><i class="glyphicon glyphicon-globe"></i></td>
+                <td>HTTP port</td>
+                <td><b>${httpPort}</b></td>
+            </tr>
+            <tr>
+                <td><i class="glyphicon glyphicon-envelope"></i></td>
+                <td>SMTP threads</td>
+                <td><b>5</b></td>
+            </tr>
+            <tr>
+                <td><i class="glyphicon glyphicon-globe"></i></td>
+                <td>HTTP threads</td>
+                <td><b>5</b></td>
+            </tr>
+            <tr>
+                <td><i class="glyphicon glyphicon-envelope"></i></td>
+                <td>Total mails</td>
+                <td><b>0 / 40</b></td>
+            </tr>
+            <tr>
+                <td><i class="glyphicon glyphicon-time"></i></td>
+                <td>Total uptime</td>
+                <td><b>10h</b></td>
+            </tr>
+            </tbody>
+        </table>
+        <img class="pull-left img-cat" src="/img/cat.jpg">
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+        ${body}
     </div>
 </div>
 <div id="footer">
     <div class="container">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <br>
             <span class="pull-left">
                 <a href="http://jtalks.org">JTalks project</a> &copy; 2014
