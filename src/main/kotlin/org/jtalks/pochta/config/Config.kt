@@ -4,6 +4,7 @@ import java.util.Properties
 import java.util.ArrayList
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
+import java.util.Date
 
 /**
  *
@@ -13,9 +14,11 @@ public class Config(props: Properties) {
     val smtp: Smtp = Smtp(props)
     val http: Http = Http(props)
     val mailboxes: Mailboxes = Mailboxes(props)
+    val initTime: Date = Date()
 
     class Http(props: Properties) {
         public val port: Int = props.getInt("jtalks.pochta.http.port")
+        public val threads: Int = props.getInt("jtalks.pochta.http.threads")
     }
 
     class Smtp(props: Properties) {
@@ -35,6 +38,7 @@ public class Config(props: Properties) {
 
         public val connectionTimeout: Int = 60000 // 1 minute
         public val port: Int = props.getInt("jtalks.pochta.smtp.port")
+        public val threads: Int = props.getInt("jtalks.pochta.smtp.threads")
         public val authType: AuthType = AuthType.ENFORCED
         public val transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
     }

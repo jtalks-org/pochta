@@ -8,5 +8,5 @@ import org.json.simple.JSONArray
  * Extension functions to ease rest data output
  */
 fun <T> Iterable<T>.asJsonArray(): JSONArray {
-    return this.fold(JSONArray(), {(array, address) -> array.add(address); array })
+    return this.fold(JSONArray()){(array, address) -> array.add(address); array }
 }

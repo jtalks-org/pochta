@@ -15,7 +15,7 @@ import java.util.concurrent.Executors
          val config = ConfigLoader.config;
          server.bind(InetSocketAddress(config.http.port), 0)
          setupResourceHandlers()
-         server.setExecutor(Executors.newFixedThreadPool(5))
+         server.setExecutor(Executors.newFixedThreadPool(config.http.threads))
          server.start()
          println("HTTP server listening on port ${config.http.port}")
      }

@@ -1,32 +1,75 @@
-<h2>About the service</h2>
+<div class="col-md-3">
+    <br>
 
-<p class="lead muted">
-    Pochta service is a dedicated mail testing tool. Pochta collects all the mails sent and
-    offers message data as JSON. Any automated functional test can collect this data later
-    to check if e-mail meets certain expectations.
-</p>
-<br>
-<h2>Available mailboxes</h2>
-<br>
-<table class="table table-striped table-hover ">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Login</th>
-        <th>Messages available</th>
-        <th>JSON data</th>
-    </tr>
-    </thead>
-    <tbody>
-    ${foreach mailboxes mbox}
-    <tr>
-        <td>${mbox.config.id}</td>
-        <td>${mbox.config.name}</td>
-        <td>${mbox.config.login}</td>
-        <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
-        <td><a href="/inboxes/${mbox.config.loginEscaped}?token=">Click fo fetch</a></td>
-    </tr>
-    ${end}
-    </tbody>
-</table>
+    <h3>Server status</h3>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td><i class="glyphicon glyphicon-envelope"></i></td>
+            <td>SMTP port</td>
+            <td><b>${smtpPort}</b></td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-globe"></i></td>
+            <td>HTTP port</td>
+            <td><b>${httpPort}</b></td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-envelope"></i></td>
+            <td>SMTP threads</td>
+            <td><b>${smtpThreads}</b></td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-globe"></i></td>
+            <td>HTTP threads</td>
+            <td><b>${httpThreads}</b></td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-envelope"></i></td>
+            <td>Total mails</td>
+            <td><b>${mailsTotal} / ${mailsLimit}</b></td>
+        </tr>
+        <tr>
+            <td><i class="glyphicon glyphicon-time"></i></td>
+            <td>Uptime</td>
+            <td><b>${uptime}h</b></td>
+        </tr>
+        </tbody>
+    </table>
+    <img class="pull-left img-cat" src="/img/cat.jpg">
+</div>
+<div class="col-md-8 col-md-offset-1">
+    <h2>About the service</h2>
+
+    <p class="lead muted">
+        Pochta service is a dedicated mail testing tool. Pochta collects all the mails sent and
+        offers message data as JSON. Any automated functional test can collect this data later
+        to check if e-mail meets certain expectations.
+    </p>
+    <br>
+
+    <h2>Available mailboxes</h2>
+    <br>
+    <table class="table table-striped table-hover ">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Login</th>
+            <th>Messages available</th>
+            <th>JSON data</th>
+        </tr>
+        </thead>
+        <tbody>
+        ${foreach mailboxes mbox}
+        <tr>
+            <td>${mbox.config.id}</td>
+            <td>${mbox.config.name}</td>
+            <td>${mbox.config.login}</td>
+            <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
+            <td><a href="/inboxes/${mbox.config.loginEscaped}?token=">Click fo fetch</a></td>
+        </tr>
+        ${end}
+        </tbody>
+    </table>
+</div>

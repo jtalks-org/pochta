@@ -18,7 +18,7 @@ object MailListHandler : TokenAuthenticatedHandler {
     }
 
     private fun getMailListJson(): String =
-            Mailboxes.byContextPassword()?.map({(e) -> asJson(e) })?.asJsonArray().toString()
+            Mailboxes.byContextPassword()?.map{(e) -> asJson(e) }?.asJsonArray().toString()
 
     private fun asJson(session: MailSession): JSONObject {
         val result = JSONObject()
