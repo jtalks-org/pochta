@@ -7,13 +7,13 @@ import org.jtalks.pochta.store.Mailboxes
 import java.util.concurrent.TimeUnit
 
 /**
- *
+ *  Renders main application page with service stats and mailbox list
  */
-object MainPageHandler : HttpHandler {
+object MainPageController : Controller {
 
-    override fun handle(exchange: HttpExchange?) {
+    override fun process(exchange: HttpExchange) {
         val config = ConfigLoader.config
-        exchange?.writeResponse(200,
+        exchange.writeResponse(200,
                 ModelAndView("main")
                         .put("smtpPort", config.smtp.port)
                         .put("smtpThreads", config.smtp.threads)
@@ -28,5 +28,5 @@ object MainPageHandler : HttpHandler {
     }
 
     private fun uptimeInHours() = TimeUnit.HOURS.convert(
-                System.currentTimeMillis() - ConfigLoader.config.initTime.getTime(), TimeUnit.MILLISECONDS)
+            System.currentTimeMillis() - ConfigLoader.config.initTime.getTime(), TimeUnit.MILLISECONDS)
 }

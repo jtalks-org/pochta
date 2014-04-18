@@ -30,3 +30,7 @@ body {
 .navbar-header {
     padding-left: 50px;
 }
+
+.stat-icon {
+    padding-top: 3px;
+}

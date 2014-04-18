@@ -5,32 +5,32 @@
     <table class="table">
         <tbody>
         <tr>
-            <td><i class="glyphicon glyphicon-envelope"></i></td>
+            <td><i class="stat-icon glyphicon glyphicon-envelope"></i></td>
             <td>SMTP port</td>
             <td><b>${smtpPort}</b></td>
         </tr>
         <tr>
-            <td><i class="glyphicon glyphicon-globe"></i></td>
+            <td><i class="stat-icon glyphicon glyphicon-globe"></i></td>
             <td>HTTP port</td>
             <td><b>${httpPort}</b></td>
         </tr>
         <tr>
-            <td><i class="glyphicon glyphicon-envelope"></i></td>
+            <td><i class="stat-icon glyphicon glyphicon-random"></i></td>
             <td>SMTP threads</td>
             <td><b>${smtpThreads}</b></td>
         </tr>
         <tr>
-            <td><i class="glyphicon glyphicon-globe"></i></td>
+            <td><i class="stat-icon glyphicon glyphicon-random"></i></td>
             <td>HTTP threads</td>
             <td><b>${httpThreads}</b></td>
         </tr>
         <tr>
-            <td><i class="glyphicon glyphicon-envelope"></i></td>
+            <td><i class="stat-icon glyphicon glyphicon-inbox"></i></td>
             <td>Total mails</td>
             <td><b>${mailsTotal} / ${mailsLimit}</b></td>
         </tr>
         <tr>
-            <td><i class="glyphicon glyphicon-time"></i></td>
+            <td><i class="stat-icon glyphicon glyphicon-time"></i></td>
             <td>Uptime</td>
             <td><b>${uptime}h</b></td>
         </tr>
@@ -64,10 +64,10 @@
         ${foreach mailboxes mbox}
         <tr>
             <td>${mbox.config.id}</td>
-            <td>${mbox.config.name}</td>
-            <td>${mbox.config.login}</td>
+            <td>${mbox.config.name;htmlEscape}</td>
+            <td>${mbox.config.login;htmlEscape}</td>
             <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
-            <td><a href="/inboxes/${mbox.config.loginEscaped}?token=">Click fo fetch</a></td>
+            <td><a href="/inboxes/${mbox.config.login;urlEncode}?token=">Click fo fetch</a></td>
         </tr>
         ${end}
         </tbody>

@@ -21,10 +21,10 @@ import java.util.concurrent.Executors
      }
 
      fun setupResourceHandlers(){
-         server.createContext("/inboxes/", MailListHandler)
-         server.createContext("/css/", StaticHandler)
-         server.createContext("/fonts/", StaticHandler)
-         server.createContext("/img/", StaticHandler)
-         server.createContext("/", MainPageHandler)
+         server.createContext("/inboxes/", MailListController)?.getFilters()?.add(TokenAuthenticationFilter)
+         server.createContext("/css/", StaticController)
+         server.createContext("/fonts/", StaticController)
+         server.createContext("/img/", StaticController)
+         server.createContext("/", MainPageController)
      }
  }
