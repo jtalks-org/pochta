@@ -8,11 +8,13 @@
 # 2. place this script in /etc/init.d
 # 3. make it executable: 'sudo chmod 755 /etc/init.d pochta'
 # 4. call 'sudo update-rc.d pochta defalults' to bind the service to an appropriate run level
-# 5. service is installed, you can control it with 'service pochta start | stop | restart'
-#
+# 5. create /var/run/pochta and make it accessible:
+#    'sudo mkdir /var/run/pochta'
+#    'sudo chmod 777 /var/run/pochta'
+# 6. service is installed, you can control it with 'service pochta start | stop | restart'
 
 start() {
-    PID_FILE=~/.pochta/pid
+    PID_FILE=/var/run/pochta/pid
     if [ -f $PID_FILE ];
     then
         echo 'Pochta service is already running, ignoring START command'
@@ -27,7 +29,7 @@ start() {
 }
 
 stop() {
-    PID_FILE=~/.pochta/pid
+    PID_FILE=/var/run/pochta/pid
     if [ -f $PID_FILE ];
     then
         echo 'Stopping Pochta service...'
