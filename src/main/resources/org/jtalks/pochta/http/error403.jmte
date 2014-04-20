@@ -1,7 +1,10 @@
-<h2>Not authenticated</h2>
+<div class="col-md-10 col-md-offset-1">
+    <h2>Not authenticated</h2>
 
-<p class="lead muted">
-    Rest access token is missing or invalid. Make sure your HTTP request has <nobr>?token=&lt;password&gt;</nobr>
+    <p class="lead muted">
+        Rest access token is missing or invalid. Make sure your HTTP request has
+    <nobr>?token=&lt;password&gt;</nobr>
     parameter specified, it should match mailbox password. For additional information please refer to
     <a href='https://github.com/jtalks-org/pochta'>Pochta project site</a>.
-</p>
+    </p>
+</div>

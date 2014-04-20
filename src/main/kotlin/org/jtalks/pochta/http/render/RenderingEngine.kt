@@ -6,6 +6,7 @@ import com.floreysoft.jmte.RenderFormatInfo
 import java.util.Locale
 import java.net.URLEncoder
 import org.apache.commons.lang3.StringEscapeUtils
+import java.util.HashMap
 
 /**
  *  Fills HTML page templates with necessary dynamic data

@@ -27,7 +27,7 @@ public fun main(args: Array<String>) {
         val message = MimeMessage(session)
         message.setFrom(InternetAddress(from))
         message.addRecipient(Message.RecipientType.TO, InternetAddress(to))
-        message.setSubject("This is the Subject Line!")
+        message.setSubject("This is the long  long long long long long long longSubject Line!")
         message.setText("This is actual message")
         Transport.send(message)
         System.out.println("Sent message successfully....")

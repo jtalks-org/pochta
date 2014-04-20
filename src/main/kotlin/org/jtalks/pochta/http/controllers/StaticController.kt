@@ -1,21 +1,20 @@
-package org.jtalks.pochta.http
+package org.jtalks.pochta.http.controllers
 
-import com.sun.net.httpserver.HttpHandler
 import com.sun.net.httpserver.HttpExchange
 import java.io.BufferedInputStream
 
 /**
- * Gives away static content from classpath resources.
- * If nothing can be found in classpath for a given URL, then 404 is returned.
+ * todo: autodetect mime-type, at least by file extension
  */
-object StaticController : Controller {
+class StaticController(val mime: String) : Controller {
 
     override fun process(exchange: HttpExchange) {
         val path = exchange.getRequestURI()?.getPath().toString()
-        val stream = javaClass.getResourceAsStream(path.substring(1))
+        val stream = javaClass.getResourceAsStream("../${path.substring(1)}")
         if (stream == null) {
             exchange.writeResponse(404)
         } else {
+            exchange.setContentType(mime)
             exchange.writeResponse(200, BufferedInputStream(stream))
         }
     }

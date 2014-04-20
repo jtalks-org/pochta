@@ -43,6 +43,9 @@ class Mailbox(val config: Config.MailboxConfig) : Iterable<MailSession> {
             size = mails.size
         }
     }
+
+    fun byId(id : Int) = mails.filter{(mail) -> mail.id == id}.first
+
     fun size() = mails.size()
 
     override fun iterator(): Iterator<MailSession> = mails.iterator()

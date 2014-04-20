@@ -1,0 +1,48 @@
+<div class="col-md-10 col-md-offset-1">
+    <h2>Mailbox ${mailbox.config.name;htmlEscape}</h2>
+    <hr>
+    <div id="error-container">
+    </div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+    <h4>&nbsp;&nbsp;<i class="stat-icon glyphicon glyphicon-th-list"></i> Available mails:</h4>
+
+    <div class="list-group">
+        ${foreach mailbox mail}
+        <a href="/mails/${mail.id}" class="list-group-item mail-list">
+            ${mail.id}. ${mail.subject}
+        </a>
+        ${end}
+    </div>
+</div>
+<div class="col-md-7">
+    <div class="panel panel-default">
+        <div class="panel-heading"><i class="stat-icon glyphicon glyphicon-edit"></i> Protocol data</div>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Envelope sender</td>
+                <td id="sender"></td>
+            </tr>
+            <tr>
+                <td>Envelope recipients</td>
+                <td id="recipients"></td>
+            </tr>
+            <tr>
+                <td>Reception date</td>
+                <td id="date"></td>
+            </tr>
+            <tr>
+                <td>Sender's address</td>
+                <td id="ip"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><i class="stat-icon glyphicon glyphicon-envelope"></i> Mail as text</div>
+        <div class="panel-body">
+            <p id="mail-body">Choose a mail on the left to view it's content here</p>
+        </div>
+    </div>
+</div>

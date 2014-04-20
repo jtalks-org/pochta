@@ -1,9 +1,11 @@
-package org.jtalks.pochta.http
+package org.jtalks.pochta.http.filters
 
 import com.sun.net.httpserver.Filter
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.util.Context
 import org.jtalks.pochta.config.ConfigLoader
+import org.jtalks.pochta.http.ModelAndView
+import org.jtalks.pochta.http.controllers.writeResponse
 
 object TokenAuthenticationFilter : Filter() {
 

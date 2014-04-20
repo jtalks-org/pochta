@@ -1,0 +1,30 @@
+<div class="col-md-10 col-md-offset-1">
+    <br>
+    <h2>Internal server error</h2>
+
+    <p class="lead muted">
+        Something went deeply wrong and server is not able to to respond normally.
+        More information may be available in Pochta log file. If you feel it's a bug
+        please report an issue <a href='https://github.com/jtalks-org/pochta/issues'>here</a>.
+    </p>
+    <br>
+    <div class="panel panel-default">
+        <div class="panel-heading">Error details</div>
+        <div class="panel-body">
+            <p><b>${class}: ${message}</b></p>
+            <div class="exception">
+                ${foreach stackTrace element}
+                at ${element}<br>
+                ${end}
+            </div>
+        </div>
+    </div>
+
+<!--    <h3>Error details</h3>
+    <p><b>${class}: ${message}</b></p>
+    <div class="exception">
+        ${foreach stackTrace element}
+            at ${element}<br>
+        ${end}
+    </div>-->
+</div>

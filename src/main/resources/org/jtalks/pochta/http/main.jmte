@@ -56,8 +56,9 @@
             <th>#</th>
             <th>Name</th>
             <th>Login</th>
-            <th>Messages available</th>
-            <th>JSON data</th>
+            <th>Mails</th>
+            <th>View content</th>
+            <th>Content as JSON</th>
         </tr>
         </thead>
         <tbody>
@@ -67,6 +68,7 @@
             <td>${mbox.config.name;htmlEscape}</td>
             <td>${mbox.config.login;htmlEscape}</td>
             <td>${mbox.size} <b>/</b> ${mbox.config.size}</td>
+            <td><a href="/webinboxes/${mbox.config.login;urlEncode}?token=">Click fo view</a></td>
             <td><a href="/inboxes/${mbox.config.login;urlEncode}?token=">Click fo fetch</a></td>
         </tr>
         ${end}

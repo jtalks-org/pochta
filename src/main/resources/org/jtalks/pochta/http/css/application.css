@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 #footer {
@@ -24,7 +24,7 @@ body {
 }
 
 .img-cat {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .navbar-header {
@@ -33,4 +33,9 @@ body {
 
 .stat-icon {
     padding-top: 3px;
+}
+
+.exception {
+    padding-left: 30px;
+    font-family:"Courier New", Courier, monospace
 }

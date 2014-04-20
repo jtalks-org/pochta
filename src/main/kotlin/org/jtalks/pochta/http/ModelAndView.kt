@@ -36,6 +36,4 @@ class ModelAndView(val view: String) {
         reader.close()
         return template
     }
-
-
 }

@@ -1,14 +1,12 @@
-package org.jtalks.pochta.http
+package org.jtalks.pochta.http.controllers
 
-import com.sun.net.httpserver.HttpHandler
+import org.jtalks.pochta.http
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.config.ConfigLoader
+import org.jtalks.pochta.http.ModelAndView
 import org.jtalks.pochta.store.Mailboxes
 import java.util.concurrent.TimeUnit
 
-/**
- *  Renders main application page with service stats and mailbox list
- */
 object MainPageController : Controller {
 
     override fun process(exchange: HttpExchange) {
