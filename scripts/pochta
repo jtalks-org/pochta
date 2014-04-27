@@ -1,13 +1,18 @@
 #!/bin/bash
 #
-# description: Pochta mail trap service
+# pochta mail trap service
+#
+# chkconfig: 35 99 01
+# description: pochta service captures incoming mails and makes them available via REST
+# processname: pochta
 #
 # Usage:
 #
 # 1. change pochta.jar location below to point on your Pochta installation
 # 2. place this script in /etc/init.d
 # 3. make it executable: 'sudo chmod 755 /etc/init.d pochta'
-# 4. call 'sudo update-rc.d pochta defalults' to bind the service to an appropriate run level
+# 4a. (Debian and compatible) call 'sudo update-rc.d pochta defalults' to bind the service to an appropriate run level
+# 4b. (RedHat and compatible) call 'sudo chkconfig --level 35 pochta on' to bind the service to an appropriate run level
 # 5. create /var/run/pochta and make it accessible:
 #    'sudo mkdir /var/run/pochta'
 #    'sudo chmod 777 /var/run/pochta'
