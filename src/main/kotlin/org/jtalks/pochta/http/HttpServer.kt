@@ -19,8 +19,6 @@ import org.jtalks.pochta.http.controllers.RestMailController
  public object HttpServer {
 
      val server = com.sun.net.httpserver.HttpServer.create()!!
-     val anonymousFilterStack = array(ExceptionHandlingFilter)
-     val authenticatedFilterStack = array(TokenAuthenticationFilter, ExceptionHandlingFilter);
 
      {
          val config = ConfigLoader.config;

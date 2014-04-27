@@ -6,6 +6,7 @@ apply plugin: 'maven-publish-auth'
 
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
+    main.java.srcDirs += 'src/main/resources'
     test.java.srcDirs += 'src/test/kotlin'
 }
 
