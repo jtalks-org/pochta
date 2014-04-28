@@ -11,7 +11,7 @@ sourceSets {
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7
-version = '0.1'
+version = '1.0'
 
 repositories {
     mavenCentral()
