@@ -19,15 +19,16 @@ Note, that during the first startup a folder `~/.pochta` is created with the def
 Now, imaging your app sends mail to its users using Pochta SMTP Server: `SUT --> Pochta --> realuser@mail.com`. After the mail was sent 
 to Pochta it doesn't actually deliver the message to the end user, but rather Pochta stores it. Now in tests you can get the list of mails with the content e.g. by following: [localhost:9000/inboxes/user?token=secret](http://localhost:9000/inboxes/user?token=secret) and the returned content may look like this:
 ```json
-[{
-  server_id: 1,
-  sender_ip: "/127.0.0.1:54642",
-  mail_body: "From: web@gmail.com To: realuser@mail.com Message-ID: <1722681408.0.1398714670448.JavaMail.sbashkyrtsev@sbashkyrtsev-nb.local> Subject: This is the long long long long long long long longSubject Line! MIME-Version: 1.0 Content-Type: text/plain; charset=us-ascii Content-Transfer-Encoding: 7bit This is actual message ",
-  envelope_from: "web@gmail.com",
-  delivery_date: "Mon Apr 28 23:51:10 MSK 2014",
-  envelope_recipients: ["realuser@mail.com"]
-}]
-
+[
+  {
+    "server_id": 1,
+    "sender_ip": "\/127.0.0.1:54642",
+    "mail_body": "From: web@gmail.com\r\nTo: realuser@mail.com\r\nMessage-ID: <1722681408.0.1398714670448.JavaMail.sbashkyrtsev@sbashkyrtsev-nb.local>\r\nSubject: This is the long  long long long long long long longSubject Line!\r\nMIME-Version: 1.0\r\nContent-Type: text\/plain; charset=us-ascii\r\nContent-Transfer-Encoding: 7bit\r\n\r\nThis is actual message\r\n",
+    "envelope_from": "web@gmail.com",
+    "delivery_date": "Mon Apr 28 23:51:10 MSK 2014",
+    "envelope_recipients": ["realuser@mail.com"]
+  }
+]
 ```
 
 You can create new mailboxes in config file, while configuring them you should specify both mailbox and the password. When trying to use Pochta as SMTP Server,
