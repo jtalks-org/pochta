@@ -18,6 +18,8 @@
 #    'sudo chmod 777 /var/run/pochta'
 # 6. service is installed, you can control it with 'service pochta start | stop | restart'
 
+set -u
+
 start() {
     PID_FILE=/var/run/pochta/pid
     if [ -f $PID_FILE ];
@@ -26,9 +28,10 @@ start() {
     else
         echo 'Starting Pochta service...'
         # don't forget to put your specific path to pochta.jar here
-        java -jar /usr/bin/pochta.jar &
+        java -jar /usr/bin/pochta.jar >/dev/null &
         PID=$!
         echo $PID > $PID_FILE
+        echo 'Service is up and running'
     fi
 
 }
@@ -38,8 +41,9 @@ stop() {
     if [ -f $PID_FILE ];
     then
         echo 'Stopping Pochta service...'
-        kill -9 $(cat $PID_FILE)
+        kill $(cat $PID_FILE)
         rm -f $PID_FILE
+        echo 'Service stopped'
     else
         echo 'Pochta service is not running, ignoring STOP command'
     fi
