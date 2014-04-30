@@ -22,18 +22,27 @@ set -u
 
 start() {
     PID_FILE=/var/run/pochta/pid
+    PID_DIR=/var/run/pochta
+    if [ ! -w $PID_DIR ] ;
+    then
+        echo 'Can't create pid file ${PID_FILE}, path is not accessible' ;
+        exit 1
+    fi
     if [ -f $PID_FILE ];
     then
         echo 'Pochta service is already running, ignoring START command'
-    else
-        echo 'Starting Pochta service...'
-        # don't forget to put your specific path to pochta.jar here
-        java -jar /usr/bin/pochta.jar >/dev/null &
-        PID=$!
+        exit 1
+    fi
+    echo 'Starting Pochta service...'
+    # don't forget to put your specific path to pochta.jar here
+    java -jar /usr/bin/pochta.jar >/dev/null &
+    PID=$!
+    sleep 1
+    if [ -d "/proc/${PID}" ];
+    then
         echo $PID > $PID_FILE
         echo 'Service is up and running'
     fi
-
 }
 
 stop() {
