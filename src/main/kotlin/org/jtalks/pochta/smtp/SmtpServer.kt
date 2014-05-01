@@ -8,13 +8,21 @@ import org.jtalks.pochta.config.ConfigLoader
  */
 public object SmtpServer {
 
+    private val server : SmtpMailServer
+
     {
         val config = ConfigLoader.config;
         if (config.smtp.transportSecurity == SSL) {
-            SmtpsMailServer(config).start()
+            server = SmtpsMailServer(config)
         } else {
-            SmtpMailServer(config).start()
+            server = SmtpMailServer(config)
         }
+        server.start()
+        Runtime.getRuntime().addShutdownHook(shutdownHook)
         println("SMTP server listening on port ${config.smtp.port}")
+    }
+
+    private object shutdownHook: Thread() {
+        override fun run() = server.stop()
     }
 }

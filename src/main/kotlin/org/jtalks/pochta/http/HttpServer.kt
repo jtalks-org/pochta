@@ -26,6 +26,7 @@ import org.jtalks.pochta.http.controllers.RestMailController
          setupResourceHandlers()
          server.setExecutor(Executors.newFixedThreadPool(config.http.threads))
          server.start()
+         Runtime.getRuntime().addShutdownHook(shutdownHook)
          println("HTTP server listening on port ${config.http.port}")
      }
 
@@ -44,5 +45,9 @@ import org.jtalks.pochta.http.controllers.RestMailController
          val context = server.createContext(path, controller)
          context?.getFilters()?.addAll(filters)
          context?.getFilters()?.add(ExceptionHandlingFilter)
+     }
+
+     private object shutdownHook: Thread() {
+         override fun run() = server.stop(1)
      }
  }
