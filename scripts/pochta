@@ -17,30 +17,44 @@
 #    'sudo mkdir /var/run/pochta'
 #    'sudo chmod 777 /var/run/pochta'
 # 6. service is installed, you can control it with 'service pochta start | stop | restart'
+#
 
 set -u
 
 start() {
+    # don't forget to put your specific path to pochta.jar here
+    BIN_PATH=/usr/bin/pochta.jar
     PID_FILE=/var/run/pochta/pid
     PID_DIR=/var/run/pochta
-    if [ ! -w $PID_DIR ] ;
+
+    # check access permissions for pid-file folder
+    if [ ! -w ${PID_DIR} ] ;
     then
-        echo 'Can't create pid file ${PID_FILE}, path is not accessible' ;
+        echo 'Cannot create pid file ${PID_FILE}, path is not accessible' ;
         exit 1
     fi
-    if [ -f $PID_FILE ];
+
+    # do we have a pid file? is the specified process still alive?
+    if [ -f ${PID_FILE} ];
     then
-        echo 'Pochta service is already running, ignoring START command'
-        exit 1
+        EXISTING_PID=$(cat ${PID_FILE})
+         if [ -d "/proc/${EXISTING_PID}" ];
+         then
+             echo 'Pochta service is already running, ignoring START command'
+             exit 1
+         else
+             rm -f ${PID_FILE}
+         fi
     fi
+
+    # Everything seems ok, launching the service
     echo 'Starting Pochta service...'
-    # don't forget to put your specific path to pochta.jar here
-    java -jar /usr/bin/pochta.jar >/dev/null &
+    java -jar ${BIN_PATH} >/dev/null &
     PID=$!
     sleep 1
     if [ -d "/proc/${PID}" ];
     then
-        echo $PID > $PID_FILE
+        echo ${PID} > $PID_FILE
         echo 'Service is up and running'
     fi
 }
