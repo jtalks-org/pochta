@@ -2,27 +2,22 @@ package org.jtalks.pochta.smtp
 
 import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.SSL
 import org.jtalks.pochta.config.ConfigLoader
+import org.jtalks.pochta.util.LifeCycleAware
+import org.jtalks.pochta.util.logInfo
 
 /**
  *
  */
-public object SmtpServer {
-
-    private val server : SmtpMailServer
+public object SmtpServer : LifeCycleAware {
 
     {
         val config = ConfigLoader.config;
-        if (config.smtp.transportSecurity == SSL) {
-            server = SmtpsMailServer(config)
-        } else {
-            server = SmtpMailServer(config)
-        }
+        val server: SmtpMailServer = if (config.smtp.transportSecurity == SSL)
+            SmtpsMailServer(config)
+        else
+            SmtpMailServer(config)
         server.start()
-        Runtime.getRuntime().addShutdownHook(shutdownHook)
-        println("SMTP server listening on port ${config.smtp.port}")
-    }
-
-    private object shutdownHook: Thread() {
-        override fun run() = server.stop()
+        addShutdownHook { server.stop() }
+        logInfo("SMTP server listening on port ${config.smtp.port}")
     }
 }

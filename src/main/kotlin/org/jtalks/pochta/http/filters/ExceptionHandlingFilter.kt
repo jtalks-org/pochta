@@ -4,6 +4,7 @@ import com.sun.net.httpserver.Filter
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.http.controllers.writeResponse
 import org.jtalks.pochta.http.ModelAndView
+import org.jtalks.pochta.util.logError
 
 /**
  * Catches any unhandled exception, logs it and forwards the user
@@ -16,8 +17,7 @@ object ExceptionHandlingFilter: Filter() {
         try {
             chain?.doFilter(exchange)
         } catch(e: Exception) {
-            // todo: appropriate logging
-            e.printStackTrace()
+            logError(e)
             val cause = e.getRootCause()
             exchange?.writeResponse(500, ModelAndView("error500")
                     .put("class", cause.javaClass.getCanonicalName() ?: "<Exception class is unknown>")

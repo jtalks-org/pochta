@@ -22,4 +22,6 @@ fun Properties.getInt(key: String): Int {
     }
 }
 
+fun Properties.getBoolean(key: String): Boolean = java.lang.Boolean.parseBoolean(this.getString(key))
+
 class ConfigurationException(message: String) : Exception(message)

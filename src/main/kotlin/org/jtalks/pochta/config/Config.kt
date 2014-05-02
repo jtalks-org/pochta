@@ -13,6 +13,7 @@ public class Config(props: Properties) {
 
     val smtp: Smtp = Smtp(props)
     val http: Http = Http(props)
+    val log: Log = Log(props)
     val mailboxes: Mailboxes = Mailboxes(props)
     val initTime: Date = Date()
 
@@ -41,6 +42,13 @@ public class Config(props: Properties) {
         public val threads: Int = props.getInt("jtalks.pochta.smtp.threads")
         public val authType: AuthType = AuthType.ENFORCED
         public val transportSecurity: TransportSecurity = TransportSecurity.PLAINTEXT
+    }
+
+    class Log(props: Properties){
+        public val enabled: Boolean = props.getBoolean("jtalks.pochta.log.enabled");
+        public val verbose: Boolean = props.getBoolean("jtalks.pochta.log.verbose");
+        public val consoleEnabled: Boolean = props.getBoolean("jtalks.pochta.log.sysout");
+        public val logSmtpSessions: Boolean = props.getBoolean("jtalks.pochta.log.smtpSessions");
     }
 
     class MailboxConfig(val id: Int, val name : String, val login: String, val password: String, val size: Int) {
