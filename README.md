@@ -9,7 +9,7 @@ them or to go through the workflow in automated manner.
 afraid mails will be delivered to real users.
 
 ####Installation
-- Download the [latest version](http://repo.jtalks.org/content/repositories/releases/org/jtalks/jtalks-pochta/1.0/jtalks-pochta-1.0.jar)
+- Download the [latest version](http://repo.jtalks.org/content/repositories/releases/org/jtalks/jtalks-pochta/1.1/jtalks-pochta-1.1.jar)
 - Run `java -jar pochta.jar`
 - Open [localhost:9000](http://localhost:9000)
 
