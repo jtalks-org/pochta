@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="/css/application.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="${/css/bootstrap.min.css;fingerprint}" media="all" rel="stylesheet" type="text/css"/>
+    <link href="${/css/application.css;fingerprint}" media="all" rel="stylesheet" type="text/css"/>
     <title>${title}</title>
 </head>
 <body>
@@ -43,6 +43,6 @@
 </body>
 </html>
 <!--speed up rendering a bit by loading the scripts after the document-->
-<script src="/js/jquery.min.js" type="application/javascript"></script>
-<script src="/js/bootstrap.min.js" type="application/javascript"></script>
-<script src="/js/application.js" type="application/javascript"></script>
+<script src="${/js/jquery.min.js;fingerprint}" type="application/javascript"></script>
+<script src="${/js/bootstrap.min.js;fingerprint}" type="application/javascript"></script>
+<script src="${/js/application.js;fingerprint}" type="application/javascript"></script>

@@ -12,6 +12,10 @@ fun HttpExchange.setContentType(mime: String) {
     getResponseHeaders()?.set("Content-Type", mime);
 }
 
+fun HttpExchange.setHeader(name: String, value: String) {
+    getResponseHeaders()?.set(name, value);
+}
+
 fun HttpExchange.writeResponse(code: Int, content: String) {
     val charset = StandardCharsets.UTF_8
     sendResponseHeaders(code, content.getBytes(charset).size.toLong())
@@ -28,7 +32,7 @@ fun HttpExchange.writeResponse(code: Int, content: InputStream) {
 }
 
 fun HttpExchange.writeResponse(code: Int) {
-    sendResponseHeaders(code, 0)
+    sendResponseHeaders(code, if (code == 304) -1 else 0)
     close()
 }
 

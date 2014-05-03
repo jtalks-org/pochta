@@ -36,7 +36,7 @@
         </tr>
         </tbody>
     </table>
-    <img class="pull-left img-cat" src="/img/cat.jpg">
+    <img class="pull-left img-cat" src="${/img/cat.jpg;fingerprint}">
 </div>
 <div class="col-md-8 col-md-offset-1">
     <h2>About the service</h2>
