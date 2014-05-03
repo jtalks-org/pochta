@@ -16,7 +16,7 @@ afraid mails will be delivered to real users.
 Note, that during the first startup a folder `~/.pochta` is created with the default configuration. You can change the configuration to match your needs: http/smtp ports, mailboxes and passwords.
 
 ####Usage
-Now, imaging your app sends mail to its users using Pochta SMTP Server: `SUT --> Pochta --> realuser@mail.com`. After the mail was sent 
+Now, imagine your app sends mail to its users using Pochta SMTP Server: `SUT --> Pochta --> realuser@mail.com`. After the mail was sent 
 to Pochta it doesn't actually deliver the message to the end user, but rather Pochta stores it. Now in tests you can get the list of mails with the content e.g. by following: [localhost:9000/inboxes/user?token=secret](http://localhost:9000/inboxes/user?token=secret) and the returned content may look like this:
 ```json
 [
