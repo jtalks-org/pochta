@@ -1,0 +1,44 @@
+<root>
+    <item name='com.sun.mail.handlers.text_plain java.lang.Object getContent(javax.activation.DataSource)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.text_plain java.awt.datatransfer.DataFlavor[] getTransferDataFlavors()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.message_rfc822 java.lang.Object getContent(javax.activation.DataSource)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.text_plain void writeTo(java.lang.Object, java.lang.String, java.io.OutputStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.message_rfc822 void writeTo(java.lang.Object, java.lang.String, java.io.OutputStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.message_rfc822 java.lang.Object getContent(javax.activation.DataSource) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.image_gif java.awt.datatransfer.DataFlavor[] getTransferDataFlavors()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.multipart_mixed java.lang.Object getContent(javax.activation.DataSource)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.text_plain java.lang.Object getContent(javax.activation.DataSource) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.text_xml void writeTo(java.lang.Object, java.lang.String, java.io.OutputStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.message_rfc822 java.awt.datatransfer.DataFlavor[] getTransferDataFlavors()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.multipart_mixed java.lang.Object getContent(javax.activation.DataSource) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.multipart_mixed java.awt.datatransfer.DataFlavor[] getTransferDataFlavors()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.handlers.image_gif java.lang.Object getContent(javax.activation.DataSource) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

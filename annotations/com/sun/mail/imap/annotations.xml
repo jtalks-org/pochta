@@ -1,0 +1,422 @@
+<root>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder[] getPersonalNamespaces()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] getSortedMessages(com.sun.mail.imap.SortTerm[], javax.mail.search.SearchTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] expunge()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPNestedMessage void setFlags(javax.mail.Flags, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder getFolder(javax.mail.URLName) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore IMAPStore(javax.mail.Session, javax.mail.URLName, java.lang.String, boolean) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder IMAPFolder(com.sun.mail.imap.protocol.ListInfo, com.sun.mail.imap.IMAPStore) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.MessageCache com.sun.mail.imap.IMAPMessage getMessage(int)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.util.Enumeration getNonMatchingHeaders(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.lang.Object getMessageCacheLock()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder IMAPFolder(java.lang.String, char, com.sun.mail.imap.IMAPStore, java.lang.Boolean) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.util.Enumeration getMatchingHeaderLines(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Utility com.sun.mail.imap.protocol.MessageSet[] toMessageSet(javax.mail.Message[], com.sun.mail.imap.Utility.Condition) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage void setFlags(javax.mail.Flags, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder messageCacheLock'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] getMessagesByUID(long[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder com.sun.mail.imap.AppendUID[] appendUIDMessages(javax.mail.Message[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm SIZE'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder IMAPFolder(com.sun.mail.imap.protocol.ListInfo, com.sun.mail.imap.IMAPStore) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.util.Enumeration getMatchingHeaderLines(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.util.Enumeration getAllHeaderLines()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.lang.Object fetchItem(com.sun.mail.imap.protocol.FetchItem) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights Rights(com.sun.mail.imap.Rights) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Folder getFolder(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.util.Enumeration getNonMatchingHeaderLines(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.ACL java.lang.Object clone()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.io.InputStream getContentStream()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Quota[] getQuota(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder java.lang.Object doProtocolCommand(com.sun.mail.imap.IMAPFolder.ProtocolCommand) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart void addHeader(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void setFlags(javax.mail.Message[], javax.mail.Flags, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void fetch(javax.mail.Message[], javax.mail.FetchProfile) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.io.InputStream getMimeStream()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void copyMessages(javax.mail.Message[], javax.mail.Folder) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage com.sun.mail.imap.protocol.IMAPProtocol getProtocol()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder IMAPFolder(java.lang.String, char, com.sun.mail.imap.IMAPStore, java.lang.Boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder.ProtocolCommand java.lang.Object doCommand(com.sun.mail.imap.protocol.IMAPProtocol) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage.FetchProfileCondition FetchProfileCondition(javax.mail.FetchProfile, com.sun.mail.imap.protocol.FetchItem[]) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore com.sun.mail.imap.protocol.IMAPProtocol newIMAPProtocol(java.lang.String, int)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights void add(com.sun.mail.imap.Rights) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder com.sun.mail.imap.protocol.IMAPProtocol getStoreProtocol()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] getMessagesByUID(long, long)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Folder[] list(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights boolean contains(com.sun.mail.imap.Rights) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder void appendMessages(javax.mail.Message[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.util.Enumeration getNonMatchingHeaderLines(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] search(javax.mail.search.SearchTerm, javax.mail.Message[]) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPSSLStore IMAPSSLStore(javax.mail.Session, javax.mail.URLName) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder DefaultFolder(com.sun.mail.imap.IMAPStore) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm TO'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void handleResponse(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder boolean renameTo(javax.mail.Folder) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart void setContent(javax.mail.Multipart) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.util.Enumeration getMatchingHeaders(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder com.sun.mail.imap.AppendUID[] appendUIDMessages(javax.mail.Message[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.MessageCache com.sun.mail.imap.IMAPMessage[] removeExpungedMessages()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.util.Enumeration getAllHeaders()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm DATE'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Folder[] listSubscribed(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder javax.mail.Folder getFolder(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage void setContentLanguage(java.lang.String[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.io.InputStream getContentStream()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm ARRIVAL'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore com.sun.mail.imap.IMAPFolder newIMAPFolder(java.lang.String, char, java.lang.Boolean)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPInputStream IMAPInputStream(com.sun.mail.imap.IMAPMessage, java.lang.String, int, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder long getUID(javax.mail.Message) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.util.Enumeration getNonMatchingHeaders(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void setFlags(int[], javax.mail.Flags, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void fetch(javax.mail.Message[], javax.mail.FetchProfile) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder javax.mail.Folder[] listSubscribed(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder.FetchProfileItem SIZE'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder getDefaultFolder()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart IMAPBodyPart(com.sun.mail.imap.protocol.BODYSTRUCTURE, java.lang.String, com.sun.mail.imap.IMAPMessage) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore com.sun.mail.imap.IMAPFolder newIMAPFolder(java.lang.String, char)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder java.lang.String getEnvelopeCommand()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights com.sun.mail.imap.Rights.Right[] getRights()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder getFolder(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPInputStream int read(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage.FetchProfileCondition FetchProfileCondition(javax.mail.FetchProfile, com.sun.mail.imap.protocol.FetchItem[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder[] getSharedNamespaces()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder javax.mail.Folder[] list(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.util.Enumeration getAllHeaders()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder.FetchProfileItem HEADERS'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] addMessages(javax.mail.Message[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.util.Enumeration getMatchingHeaders(java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm REVERSE'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore com.sun.mail.imap.IMAPFolder newIMAPFolder(com.sun.mail.imap.protocol.ListInfo)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void copyMessages(javax.mail.Message[], javax.mail.Folder) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore IMAPStore(javax.mail.Session, javax.mail.URLName, java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Utility com.sun.mail.imap.protocol.UIDSet[] toUIDSet(javax.mail.Message[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore IMAPStore(javax.mail.Session, javax.mail.URLName) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPNestedMessage java.lang.Object getMessageCacheLock()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] getMessagesByUID(long[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] getSortedMessages(com.sun.mail.imap.SortTerm[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] addMessages(javax.mail.Message[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights Rights(com.sun.mail.imap.Rights.Right) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPBodyPart java.util.Enumeration getAllHeaderLines()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm SUBJECT'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMultipartDataSource IMAPMultipartDataSource(javax.mail.internet.MimePart, com.sun.mail.imap.protocol.BODYSTRUCTURE[], java.lang.String, com.sun.mail.imap.IMAPMessage) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights boolean contains(com.sun.mail.imap.Rights.Right) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm CC'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights void add(com.sun.mail.imap.Rights.Right) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder com.sun.mail.imap.IMAPMessage newIMAPMessage(int)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.MessageCache com.sun.mail.imap.IMAPMessage[] removeExpungedMessages(javax.mail.Message[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder void appendMessages(javax.mail.Message[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights void remove(com.sun.mail.imap.Rights.Right) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder getFolder(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder[] getUserNamespaces(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.DefaultFolder javax.mail.Folder getFolder(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message getMessage(int)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage void addHeader(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage void writeTo(java.io.OutputStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore void setQuota(javax.mail.Quota) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder boolean renameTo(javax.mail.Folder) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore boolean hasCapability(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Message[] expunge(javax.mail.Message[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights Rights(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage java.io.InputStream getMimeStream()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.SortTerm FROM'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPFolder javax.mail.Folder getFolder(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore void handleResponse(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.Rights void remove(com.sun.mail.imap.Rights) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage boolean isSet(javax.mail.Flags.Flag) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPStore javax.mail.Folder getFolder(javax.mail.URLName)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPMessage IMAPMessage(com.sun.mail.imap.IMAPFolder, int) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.IMAPNestedMessage com.sun.mail.imap.protocol.IMAPProtocol getProtocol()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.MessageCache com.sun.mail.imap.IMAPMessage[] removeExpungedMessages(javax.mail.Message[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

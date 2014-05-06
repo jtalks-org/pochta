@@ -1,0 +1,47 @@
+<root>
+    <item name='com.floreysoft.jmte.message.ResourceBundleMessage com.floreysoft.jmte.message.ResourceBundleMessage onToken(com.floreysoft.jmte.token.Token)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.ResourceBundleMessage com.floreysoft.jmte.message.ResourceBundleMessage useFrameCode(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.ResourceBundleMessage com.floreysoft.jmte.message.ResourceBundleMessage withModel(java.util.Map&lt;java.lang.String,java.lang.Object&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.NoLogErrorHandler void error(java.lang.String, com.floreysoft.jmte.token.Token, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.message.ResourceBundleMessage com.floreysoft.jmte.message.ResourceBundleMessage withBaseName(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.ResourceBundleMessage com.floreysoft.jmte.message.ResourceBundleMessage usePrefixCode(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.ResourceBundleMessage com.floreysoft.jmte.message.ResourceBundleMessage useLocationCode(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.InternalErrorHandler void error(java.lang.String, com.floreysoft.jmte.token.Token, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.message.DefaultErrorHandler void error(java.lang.String, com.floreysoft.jmte.token.Token, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.message.SilentErrorHandler void error(java.lang.String, com.floreysoft.jmte.token.Token, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.message.ProductionErrorHandler void error(java.lang.String, com.floreysoft.jmte.token.Token, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+</root>

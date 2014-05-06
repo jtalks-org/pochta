@@ -36,7 +36,7 @@ public class MailSession(val context: MessageContext?) : MessageHandler {
     }
 
     override fun data(data: InputStream?) {
-        message = MimeMessage(Session.getInstance(Properties()), data)
+        message = MimeMessage(Session.getInstance(Properties()), data!!)
         subject = message?.getSubject()
     }
 

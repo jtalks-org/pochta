@@ -1,0 +1,17 @@
+<root>
+    <item name='org.subethamail.smtp.client.SMTPClient org.subethamail.smtp.client.SMTPClient.Response sendReceive(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.client.SMTPClient java.net.Socket createSocket()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.client.SmartClient org.subethamail.smtp.client.SMTPClient.Response receive()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.client.SMTPClient org.subethamail.smtp.client.SMTPClient.Response receive()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.client.SMTPException SMTPException(org.subethamail.smtp.client.SMTPClient.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

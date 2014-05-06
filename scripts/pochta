@@ -54,18 +54,18 @@ start() {
     sleep 1
     if [ -d "/proc/${PID}" ];
     then
-        echo ${PID} > $PID_FILE
+        echo ${PID} > ${PID_FILE}
         echo 'Service is up and running'
     fi
 }
 
 stop() {
     PID_FILE=/var/run/pochta/pid
-    if [ -f $PID_FILE ];
+    if [ -f ${PID_FILE} ];
     then
         echo 'Stopping Pochta service...'
-        kill $(cat $PID_FILE)
-        rm -f $PID_FILE
+        kill $(cat ${PID_FILE})
+        rm -f ${PID_FILE}
         echo 'Service stopped'
     else
         echo 'Pochta service is not running, ignoring STOP command'

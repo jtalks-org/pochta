@@ -1,0 +1,263 @@
+<root>
+    <item name='com.sun.mail.imap.protocol.Status void add(com.sun.mail.imap.protocol.Status, com.sun.mail.imap.protocol.Status) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void parseCapabilities(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument generateSequence(javax.mail.search.SearchTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.Rights[] listRights(java.lang.String, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.BODYSTRUCTURE BODYSTRUCTURE(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void login(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.Status Status(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument sentdate(javax.mail.search.DateTerm)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument flag(javax.mail.search.FlagTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.protocol.MailboxInfo select(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument recipient(javax.mail.Message.RecipientType, java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument body(javax.mail.search.BodyTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.ENVELOPE ENVELOPE(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.INTERNALDATE java.lang.String format(java.util.Date) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.protocol.UID[] fetchSequenceNumbers(long[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument subject(javax.mail.search.SubjectTerm, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument or(javax.mail.search.OrTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument messageid(javax.mail.search.MessageIDTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol boolean processIdleResponse(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument not(javax.mail.search.NotTerm, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol IMAPProtocol(java.lang.String, java.lang.String, int, java.util.Properties, boolean, com.sun.mail.util.MailLogger) 5'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol boolean hasCapability(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument body(javax.mail.search.BodyTerm, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument and(javax.mail.search.AndTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.BASE64MailboxEncoder java.lang.String encode(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument receiveddate(javax.mail.search.DateTerm)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.iap.Response readResponse()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument from(java.lang.String, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.FetchResponse FetchResponse(com.sun.mail.iap.Protocol) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.BODY BODY(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void login(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.RFC822DATA RFC822DATA(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.Rights[] listRights(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void storeFlags(int, javax.mail.Flags, boolean) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void authntlm(java.lang.String, java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPResponse IMAPResponse(com.sun.mail.imap.protocol.IMAPResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument flag(javax.mail.search.FlagTerm)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void deleteACL(java.lang.String, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.protocol.MailboxInfo examine(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument header(javax.mail.search.HeaderTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.protocol.FetchItem[] getFetchItems()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPResponse IMAPResponse(com.sun.mail.iap.Protocol) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.Namespaces.Namespace Namespace(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.RFC822SIZE RFC822SIZE(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.UID UID(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument from(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void setQuota(javax.mail.Quota) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument recipient(javax.mail.Message.RecipientType, java.lang.String, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol javax.mail.Quota[] getQuota(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void storeFlags(com.sun.mail.imap.protocol.MessageSet[], javax.mail.Flags, boolean) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void processGreeting(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument size(javax.mail.search.SizeTerm)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument header(javax.mail.search.HeaderTerm, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void storeFlags(int, int, javax.mail.Flags, boolean) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.FetchResponse FetchResponse(com.sun.mail.imap.protocol.IMAPResponse, com.sun.mail.imap.protocol.FetchItem[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol IMAPProtocol(java.lang.String, java.lang.String, int, java.util.Properties, boolean, com.sun.mail.util.MailLogger) 3'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void setCapabilities(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.Namespaces Namespaces(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument not(javax.mail.search.NotTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.ACL[] getACL(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.MailboxInfo MailboxInfo(com.sun.mail.iap.Response[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void setACL(java.lang.String, char, com.sun.mail.imap.ACL) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol int[] sort(com.sun.mail.imap.SortTerm[], javax.mail.search.SearchTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol void proxyauth(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence boolean isAscii(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.protocol.UID[] fetchSequenceNumbers(long, long)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument size(javax.mail.search.SizeTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.INTERNALDATE INTERNALDATE(com.sun.mail.imap.protocol.FetchResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument subject(javax.mail.search.SubjectTerm, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.MessageSet com.sun.mail.imap.protocol.MessageSet[] createMessageSets(int[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol int[] search(com.sun.mail.imap.protocol.MessageSet[], javax.mail.search.SearchTerm) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument or(javax.mail.search.OrTerm, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol com.sun.mail.imap.protocol.UID[] fetchSequenceNumbers(long[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument sentdate(javax.mail.search.DateTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.UIDSet com.sun.mail.imap.protocol.UIDSet[] createUIDSets(long[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol int[] search(javax.mail.search.SearchTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.ListInfo ListInfo(com.sun.mail.imap.protocol.IMAPResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol javax.mail.Quota[] getQuotaRoot(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPProtocol javax.mail.Quota[] getQuota(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.IMAPResponse IMAPResponse(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.MessageSet com.sun.mail.imap.protocol.MessageSet[] createMessageSets(int[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.BASE64MailboxDecoder int base64decode(char[], int, java.text.CharacterIterator) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.FetchResponse FetchResponse(com.sun.mail.imap.protocol.IMAPResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.UIDSet com.sun.mail.imap.protocol.UIDSet[] createUIDSets(long[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.FLAGS FLAGS(com.sun.mail.imap.protocol.IMAPResponse) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument receiveddate(javax.mail.search.DateTerm) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.imap.protocol.SearchSequence com.sun.mail.iap.Argument messageid(javax.mail.search.MessageIDTerm, java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

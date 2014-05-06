@@ -1,0 +1,95 @@
+<root>
+    <item name='com.sun.mail.iap.ByteArray byte[] getNewBytes()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Protocol void processGreeting(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Response java.lang.String toString()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Argument void write(com.sun.mail.iap.Protocol) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Protocol com.sun.mail.iap.Response readResponse()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Argument void writeString(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ResponseInputStream com.sun.mail.iap.ByteArray readResponse()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ParsingException ParsingException(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.BadCommandException BadCommandException(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Protocol Protocol(java.lang.String, int, java.util.Properties, java.lang.String, boolean, com.sun.mail.util.MailLogger) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Protocol com.sun.mail.iap.Response[] command(java.lang.String, com.sun.mail.iap.Argument)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ConnectionException ConnectionException(com.sun.mail.iap.Protocol, com.sun.mail.iap.Response) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Response Response(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Argument void writeString(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ByteArray java.io.ByteArrayInputStream toByteArrayInputStream()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Response com.sun.mail.iap.Response byeResponse(java.lang.Exception)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Literal void writeTo(java.io.OutputStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.iap.Response Response(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ResponseInputStream com.sun.mail.iap.ByteArray readResponse(com.sun.mail.iap.ByteArray)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Response Response(com.sun.mail.iap.Protocol) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Argument void append(com.sun.mail.iap.Argument) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Protocol void handleResult(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.LiteralException LiteralException(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ResponseHandler void handleResponse(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.sun.mail.iap.Response java.lang.String getRest()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Response com.sun.mail.iap.Response byeResponse(java.lang.Exception) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.Protocol Protocol(java.lang.String, int, java.util.Properties, java.lang.String, boolean, com.sun.mail.util.MailLogger) 5'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.ProtocolException ProtocolException(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.iap.CommandFailedException CommandFailedException(com.sun.mail.iap.Response) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

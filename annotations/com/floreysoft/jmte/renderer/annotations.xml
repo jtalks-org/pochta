@@ -1,0 +1,23 @@
+<root>
+    <item name='com.floreysoft.jmte.renderer.DefaultIterableRenderer java.lang.String render(java.lang.Object, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.renderer.DefaultCollectionRenderer java.lang.String render(java.lang.Object, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.renderer.DefaultObjectRenderer java.lang.String render(java.lang.Object, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.renderer.DefaultMapRenderer java.lang.String render(java.util.Map, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.renderer.DefaultMapRenderer java.lang.String render(java.lang.Object, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.renderer.DefaultCollectionRenderer java.lang.String render(java.util.Collection, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.renderer.DefaultIterableRenderer java.lang.String render(java.lang.Iterable, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

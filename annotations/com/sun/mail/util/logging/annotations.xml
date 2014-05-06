@@ -1,0 +1,17 @@
+<root>
+    <item name='com.sun.mail.util.logging.MailHandler void setSubject(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.util.logging.MailHandler void setPushLevel(java.util.logging.Level) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.util.logging.MailHandler void setAttachmentNames(java.lang.String[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.util.logging.MailHandler void setSubject(java.util.logging.Formatter) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.util.logging.MailHandler boolean isLoggable(java.util.logging.LogRecord) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

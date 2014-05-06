@@ -1,0 +1,59 @@
+<root>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decodeFast(byte[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.TextUtils java.lang.String getStringAscii(byte[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 java.lang.String encodeToString(byte[], boolean)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decodeFast(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.TextUtils byte[] getAsciiBytes(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.TextUtils byte[] getUtf8Bytes(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.TextUtils java.lang.String getStringUtf8(byte[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.TextUtils java.lang.String joinTogether(java.util.Collection&lt;java.lang.String&gt;, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decodeFast(java.lang.String)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.EmailUtils java.lang.String extractEmailAddress(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.EmailUtils boolean isValidEmailAddress(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.EmailUtils java.lang.String normalizeEmail(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decodeFast(char[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] encodeToByte(byte[], boolean)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decodeFast(char[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decodeFast(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 char[] encodeToChar(byte[], boolean)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.TextUtils byte[] getBytes(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.util.Base64 byte[] decode(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

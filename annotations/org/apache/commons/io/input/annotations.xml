@@ -1,0 +1,14 @@
+<root>
+    <item name='org.apache.commons.io.input.NullReader int read(char[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.apache.commons.io.input.NullInputStream int read(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.apache.commons.io.input.SwappedDataInputStream void readFully(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.apache.commons.io.input.ClassLoaderObjectInputStream java.lang.Class resolveClass(java.io.ObjectStreamClass) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

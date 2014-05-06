@@ -12,13 +12,12 @@ import org.jtalks.pochta.http.filters.ExceptionHandlingFilter
 import org.jtalks.pochta.http.controllers.Controller
 import com.sun.net.httpserver.Filter
 import org.jtalks.pochta.http.controllers.RestMailController
-import org.jtalks.pochta.util.LifeCycleAware
 import org.jtalks.pochta.util.logInfo
 
 /**
  * Simple HTTP server used for web UI and REST service endpoints
  */
- public object HttpServer : LifeCycleAware {
+ public object HttpServer {
 
      val server = com.sun.net.httpserver.HttpServer.create()!!
 
@@ -28,7 +27,7 @@ import org.jtalks.pochta.util.logInfo
          setupResourceHandlers()
          server.setExecutor(Executors.newFixedThreadPool(config.http.threads))
          server.start()
-         addShutdownHook { server.stop(1) }
+         Runtime.getRuntime().addShutdownHook(Thread(Runnable {server.stop(1)}))
          logInfo("HTTP server listening on port ${config.http.port}")
      }
 

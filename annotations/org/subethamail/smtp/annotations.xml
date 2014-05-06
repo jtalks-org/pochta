@@ -1,0 +1,14 @@
+<root>
+    <item name='org.subethamail.smtp.AuthenticationHandlerFactory org.subethamail.smtp.AuthenticationHandler create()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.MessageHandlerFactory org.subethamail.smtp.MessageHandler create(org.subethamail.smtp.MessageContext)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+</root>

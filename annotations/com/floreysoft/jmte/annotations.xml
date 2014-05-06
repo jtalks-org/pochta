@@ -1,0 +1,170 @@
+<root>
+    <item name='com.floreysoft.jmte.RendererRegistry com.floreysoft.jmte.Engine deregisterRenderer(java.lang.Class&lt;?&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.ModelBuilder java.util.Map&lt;java.lang.String,java.lang.Object&gt; build()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine createNonCachingEngine()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine createCompilingEngine()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ScopedMap java.util.Map&lt;java.lang.String,java.lang.Object&gt; getRawModel()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ScopedMap java.util.Map&lt;java.lang.String,java.lang.Object&gt; createScope()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.RendererRegistry com.floreysoft.jmte.Engine deregisterNamedRenderer(com.floreysoft.jmte.NamedRenderer) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.Engine java.util.Collection&lt;com.floreysoft.jmte.NamedRenderer&gt; getCompatibleRenderers(java.lang.Class&lt;?&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine registerAnnotationProcessor(com.floreysoft.jmte.AnnotationProcessor&lt;?&gt;) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine boolean variablesAvailable(java.util.Map&lt;java.lang.String,java.lang.Object&gt;, java.lang.String...) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine registerNamedRenderer(com.floreysoft.jmte.NamedRenderer) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.RendererRegistry com.floreysoft.jmte.Engine registerNamedRenderer(com.floreysoft.jmte.NamedRenderer) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.RendererRegistry com.floreysoft.jmte.Engine deregisterNamedRenderer(com.floreysoft.jmte.NamedRenderer)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.ModelBuilder ModelBuilder(java.lang.String, java.lang.Object...) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine VERSION'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine registerNamedRenderer(com.floreysoft.jmte.NamedRenderer)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine createCachingEngine()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine deregisterNamedRenderer(com.floreysoft.jmte.NamedRenderer) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.RendererRegistry com.floreysoft.jmte.Engine registerNamedRenderer(com.floreysoft.jmte.NamedRenderer)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.DefaultModelAdaptor java.lang.Object getPropertyValue(java.lang.Object, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ModelBuilder java.util.List&lt;java.util.Map&lt;java.lang.String,java.lang.Object&gt;&gt; mergeLists(java.lang.String[], java.util.List&lt;java.lang.Object&gt;...) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine deregisterAnnotationProcessor(com.floreysoft.jmte.AnnotationProcessor&lt;?&gt;) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.TemplateContext scopes'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine deregisterNamedRenderer(com.floreysoft.jmte.NamedRenderer)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ScopedMap ScopedMap(java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine deregisterRenderer(java.lang.Class&lt;?&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.RendererRegistry java.util.Collection&lt;com.floreysoft.jmte.NamedRenderer&gt; getCompatibleRenderers(java.lang.Class&lt;?&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.ProcessListener.Action END'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ProcessListener.Action SKIP'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.DefaultModelAdaptor java.lang.Object traverse(java.util.List&lt;java.lang.String&gt;, java.util.Map&lt;java.lang.String,java.lang.Object&gt;, com.floreysoft.jmte.ErrorHandler, com.floreysoft.jmte.token.Token) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Renderer java.lang.String render(T, java.util.Locale) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.ModelBuilder java.util.List&lt;java.util.Map&lt;java.lang.String,java.lang.Object&gt;&gt; mergeLists(java.lang.String[], java.util.List&lt;java.lang.Object&gt;...)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.DefaultModelAdaptor java.lang.Object traverse(java.lang.Object, java.util.List&lt;java.lang.String&gt;, int, com.floreysoft.jmte.ErrorHandler, com.floreysoft.jmte.token.Token) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine registerAnnotationProcessor(com.floreysoft.jmte.AnnotationProcessor&lt;?&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine boolean variablesAvailable(java.util.Map&lt;java.lang.String,java.lang.Object&gt;, java.lang.String...) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ModelAdaptor java.lang.Object getValue(com.floreysoft.jmte.TemplateContext, com.floreysoft.jmte.token.Token, java.util.List&lt;java.lang.String&gt;, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.ProcessListener.Action EVAL'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine deregisterAnnotationProcessor(com.floreysoft.jmte.AnnotationProcessor&lt;?&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ModelAdaptor java.lang.Object getValue(com.floreysoft.jmte.TemplateContext, com.floreysoft.jmte.token.Token, java.util.List&lt;java.lang.String&gt;, java.lang.String) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine createDefaultEngine()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.DefaultModelAdaptor java.lang.Object getValue(com.floreysoft.jmte.TemplateContext, com.floreysoft.jmte.token.Token, java.util.List&lt;java.lang.String&gt;, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.Engine com.floreysoft.jmte.Engine registerRenderer(java.lang.Class&lt;C&gt;, com.floreysoft.jmte.Renderer&lt;C&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.DefaultModelAdaptor java.lang.Object getValue(com.floreysoft.jmte.TemplateContext, com.floreysoft.jmte.token.Token, java.util.List&lt;java.lang.String&gt;, java.lang.String) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.ErrorHandler void error(java.lang.String, com.floreysoft.jmte.token.Token, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.RendererRegistry com.floreysoft.jmte.Engine registerRenderer(java.lang.Class&lt;C&gt;, com.floreysoft.jmte.Renderer&lt;C&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+</root>

@@ -2,13 +2,12 @@ package org.jtalks.pochta.smtp
 
 import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.SSL
 import org.jtalks.pochta.config.ConfigLoader
-import org.jtalks.pochta.util.LifeCycleAware
 import org.jtalks.pochta.util.logInfo
 
 /**
  *
  */
-public object SmtpServer : LifeCycleAware {
+public object SmtpServer  {
 
     {
         val config = ConfigLoader.config;
@@ -17,7 +16,7 @@ public object SmtpServer : LifeCycleAware {
         else
             SmtpMailServer(config)
         server.start()
-        addShutdownHook { server.stop() }
+        Runtime.getRuntime().addShutdownHook(Thread(Runnable { server.stop() }))
         logInfo("SMTP server listening on port ${config.smtp.port}")
     }
 }

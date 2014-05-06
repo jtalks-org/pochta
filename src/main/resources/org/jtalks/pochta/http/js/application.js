@@ -17,8 +17,9 @@ function mailListOnClick(e) {
             $('#date').text(data.delivery_date);
             $('#ip').text(data.sender_ip);
         })
-        .error(function(data) {
-            html = '<div class="alert alert-danger alert-dismissable">Message you are referring to doesn\'t exist. It may be evicted from the mailbox due to rotation. Try to reload the page to update the list of available mails.</div>'
+        .error(function () {
+            // todo: replace html insertion with DOM operations
+            var html = '<div class="alert alert-danger alert-dismissable">Message you are referring to doesn\'t exist. It may be evicted from the mailbox due to rotation. Try to reload the page to update the list of available mails.</div>'
             $("#error-container").html(html)
         })
 }

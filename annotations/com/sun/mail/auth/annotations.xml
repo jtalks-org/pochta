@@ -1,0 +1,17 @@
+<root>
+    <item name='com.sun.mail.auth.Ntlm Ntlm(java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.sun.mail.util.MailLogger) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.auth.Ntlm Ntlm(java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.sun.mail.util.MailLogger) 4'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.auth.MD4 byte[] digest(byte[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.auth.MD4 byte[] digest(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.auth.Ntlm Ntlm(java.lang.String, java.lang.String, java.lang.String, java.lang.String, com.sun.mail.util.MailLogger) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

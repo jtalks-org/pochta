@@ -1,0 +1,89 @@
+<root>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate ODD_PREFIX'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractCompiledTemplate java.lang.String transform(java.util.Map&lt;java.lang.String,java.lang.Object&gt;, java.util.Locale, com.floreysoft.jmte.ModelAdaptor, com.floreysoft.jmte.ProcessListener) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler superClassName'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler com.floreysoft.jmte.template.Template compile(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.TemplateCompiler com.floreysoft.jmte.template.Template compile(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.template.InterpretedTemplate tokenStream'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.TemplateCompiler com.floreysoft.jmte.template.Template compile(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.template.InterpretedTemplate InterpretedTemplate(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate void addSpecialVariables(com.floreysoft.jmte.token.ForEachToken, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.InterpretedTemplate InterpretedTemplate(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler com.floreysoft.jmte.template.Template compile(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.TemplateCompiler com.floreysoft.jmte.template.Template compile(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.template.InterpretedTemplate java.lang.String transform(java.util.Map&lt;java.lang.String,java.lang.Object&gt;, java.util.Locale, com.floreysoft.jmte.ModelAdaptor, com.floreysoft.jmte.ProcessListener) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate LAST_PREFIX'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate java.lang.String transform(java.util.Map&lt;java.lang.String,java.lang.Object&gt;, java.util.Locale, com.floreysoft.jmte.ModelAdaptor, com.floreysoft.jmte.ProcessListener) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.template.Template java.lang.String transform(java.util.Map&lt;java.lang.String,java.lang.Object&gt;, java.util.Locale, com.floreysoft.jmte.ModelAdaptor, com.floreysoft.jmte.ProcessListener) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler com.floreysoft.jmte.template.Template compile(java.lang.String, java.lang.String, com.floreysoft.jmte.Engine)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.InterpretedTemplate java.lang.String transformPure(com.floreysoft.jmte.TemplateContext) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler java.lang.Class&lt;?&gt; loadClass(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler localVarStack'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate EVEN_PREFIX'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate FIRST_PREFIX'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.DynamicBytecodeCompiler java.lang.Class&lt;T&gt; loadClass(byte[], java.lang.Class&lt;T&gt;) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.template.AbstractTemplate void addSpecialVariables(com.floreysoft.jmte.token.ForEachToken, java.util.Map&lt;java.lang.String,java.lang.Object&gt;) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

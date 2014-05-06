@@ -1,0 +1,14 @@
+<root>
+    <item name='org.subethamail.wiser.WiserMessage javax.mail.internet.MimeMessage getMimeMessage()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.wiser.Wiser void dumpMessages(java.io.PrintStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.wiser.WiserMessage java.lang.String toString()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.wiser.WiserMessage void dumpMessage(java.io.PrintStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

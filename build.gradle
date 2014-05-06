@@ -4,6 +4,8 @@ apply plugin: 'publishing'
 apply plugin: 'maven-publish'
 apply plugin: 'maven-publish-auth'
 
+version = '1.2'
+
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
     main.java.srcDirs += 'src/main/resources'
@@ -11,7 +13,7 @@ sourceSets {
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_7
-version = '1.2'
+
 
 repositories {
     mavenCentral()
@@ -42,6 +44,10 @@ buildscript {
         classpath 'org.hibernate.build.gradle:gradle-maven-publish-auth:2.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${project.ext.kotlin_version}"
     }
+}
+
+compileKotlin {
+    kotlinOptions.annotations = file('annotations')
 }
 
 jar {

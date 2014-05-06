@@ -1,0 +1,74 @@
+<root>
+    <item name='com.floreysoft.jmte.util.NestedParser java.util.List&lt;java.lang.Object&gt; parse(java.lang.String, java.lang.String[])'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser com.floreysoft.jmte.util.MiniParser defaultInstance()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util byte[] streamToBa(java.io.InputStream) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser java.lang.String unescape(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.NestedParser java.util.List&lt;java.lang.Object&gt; parse(java.lang.String, java.util.List&lt;java.lang.String&gt;) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Tool java.lang.String transform(java.io.File, java.io.File, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util java.util.List&lt;com.floreysoft.jmte.util.StartEndPair&gt; scan(java.lang.String, java.lang.String, java.lang.String, boolean)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util RAW_MINI_PARSER'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser com.floreysoft.jmte.util.MiniParser rawOutputInstance()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util RAW_OUTPUT_MINI_PARSER'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util MINI_PARSER'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util java.lang.String unifyNewlines(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser com.floreysoft.jmte.util.MiniParser ignoreCaseInstance()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser com.floreysoft.jmte.util.MiniParser trimmedInstance()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util java.lang.String trimFront(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.NestedParser java.util.List&lt;java.lang.Object&gt; parse(java.lang.String, java.util.List&lt;java.lang.String&gt;)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util java.lang.String readerToString(java.io.Reader) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util java.util.List&lt;java.lang.Object&gt; arrayAsList(java.lang.Object) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Tool java.lang.String transform(java.io.File, java.io.File, java.lang.String) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser int indexOf(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util java.util.List&lt;com.floreysoft.jmte.util.StartEndPair&gt; scan(java.lang.String, java.lang.String, java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.Util NO_QUOTE_MINI_PARSER'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser com.floreysoft.jmte.util.MiniParser fullRawInstance()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.floreysoft.jmte.util.MiniParser int lastIndexOf(java.lang.String, java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

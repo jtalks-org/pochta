@@ -1,0 +1,23 @@
+<root>
+    <item name='org.subethamail.smtp.io.ThresholdingOutputStream void write(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.io.ReceivedHeaderStream ReceivedHeaderStream(java.io.InputStream, java.lang.String, java.net.InetAddress, java.lang.String, java.lang.String, java.lang.String, java.lang.String) 2'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.io.DeferredFileOutputStream TMPFILE_SUFFIX'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.io.ReceivedHeaderStream int read(byte[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.io.DeferredFileOutputStream java.io.InputStream getInputStream()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.io.DeferredFileOutputStream TMPFILE_PREFIX'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.io.DotUnstuffingInputStream int read(byte[], int, int) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

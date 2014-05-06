@@ -1,0 +1,20 @@
+<root>
+    <item name='javax.mail.search.StringTerm boolean match(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='javax.mail.search.AddressTerm boolean match(javax.mail.Address) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='javax.mail.search.AndTerm AndTerm(javax.mail.search.SearchTerm[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='javax.mail.search.DateTerm java.util.Date getDate()'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='javax.mail.search.OrTerm OrTerm(javax.mail.search.SearchTerm[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='javax.mail.search.AddressStringTerm boolean match(javax.mail.Address) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

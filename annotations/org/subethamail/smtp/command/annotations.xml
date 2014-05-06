@@ -1,0 +1,125 @@
+<root>
+    <item name='org.subethamail.smtp.command.ResetCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.HelloCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.NoopCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.EhloCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.MailCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.ExpandCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.QuitCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.HelpCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.AuthCommand AUTH_CANCEL_COMMAND'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.DataCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.StartTLSCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.ReceiptCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.AuthCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.VerifyCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.HelloCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.AuthCommand VERB'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.NoopCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.ResetCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.HelpCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.EhloCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.ExpandCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.QuitCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.MailCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.StartTLSCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.DataCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.VerifyCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.AuthCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+        <annotation name='org.jetbrains.kannotator.runtime.annotations.Propagated'>
+            <val name="value" val="{org.jetbrains.kannotator.controlFlow.builder.analysis.NullabilityKey.class}"/>
+        </annotation>
+    </item>
+    <item name='org.subethamail.smtp.command.ReceiptCommand void execute(java.lang.String, org.subethamail.smtp.server.Session) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.command.HelpCommand java.lang.String getFormattedTopicList(org.subethamail.smtp.server.SMTPServer) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

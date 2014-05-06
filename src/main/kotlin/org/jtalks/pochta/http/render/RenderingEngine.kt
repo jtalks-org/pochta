@@ -16,10 +16,10 @@ import org.jtalks.pochta.http.FingerprintCache
  */
 object RenderingEngine {
 
-    private val engine = Engine.createCompilingEngine()!!
-            .registerNamedRenderer(HtmlEscapeRenderer)!!
-            .registerNamedRenderer(FingerprintedRenderer)!!
-            .registerNamedRenderer(UrlEncodeRenderer)!!
+    private val engine = Engine.createCompilingEngine()
+            .registerNamedRenderer(HtmlEscapeRenderer)
+            .registerNamedRenderer(FingerprintedRenderer)
+            .registerNamedRenderer(UrlEncodeRenderer);
     {
         engine.setModelAdaptor(FallbackModelAdaptor)
     }
@@ -32,7 +32,8 @@ object RenderingEngine {
  * key will be substituted instead as a fallback.
  */
 object FallbackModelAdaptor : DefaultModelAdaptor() {
-    override fun getValue(context: TemplateContext?, token: Token?, segments: List<String>?, expr: String?) =
-            super.getValue(context, token, segments, expr) ?: token.toString()
+    override fun getValue(context: TemplateContext, token: Token?, segments: List<String>, expression: String?) =
+        super.getValue(context, token, segments, expression) ?: token.toString()
+
 }
 

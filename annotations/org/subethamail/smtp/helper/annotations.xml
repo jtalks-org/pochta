@@ -1,0 +1,8 @@
+<root>
+    <item name='org.subethamail.smtp.helper.SimpleMessageListenerAdapter org.subethamail.smtp.MessageHandler create(org.subethamail.smtp.MessageContext)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='org.subethamail.smtp.helper.SmarterMessageListenerAdapter org.subethamail.smtp.MessageHandler create(org.subethamail.smtp.MessageContext)'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>

@@ -1,0 +1,44 @@
+<root>
+    <item name='com.sun.mail.smtp.SMTPMessage SMTPMessage(javax.mail.Session, java.io.InputStream) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport void sendMessage(javax.mail.Message, javax.mail.Address[]) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport int simpleCommand(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport void sendMessage(javax.mail.Message, javax.mail.Address[]) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.DigestMD5 boolean authServer(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport SMTPTransport(javax.mail.Session, javax.mail.URLName) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport SMTPTransport(javax.mail.Session, javax.mail.URLName, java.lang.String, boolean) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPMessage SMTPMessage(javax.mail.internet.MimeMessage) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport void issueCommand(java.lang.String, int) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport java.lang.String xtext(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPSSLTransport SMTPSSLTransport(javax.mail.Session, javax.mail.URLName) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.DigestMD5 byte[] authClient(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String) 4'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.DigestMD5 DigestMD5(com.sun.mail.util.MailLogger) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.sun.mail.smtp.SMTPTransport void sendCommand(java.lang.String) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+</root>
