@@ -28,8 +28,7 @@ object RenderingEngine {
 }
 
 /**
- * If some template variable value is missing from the model map
- * key will be substituted instead as a fallback.
+ * If some template variable value is missing from the model map substitute the key instead as a fallback.
  */
 object FallbackModelAdaptor : DefaultModelAdaptor() {
     override fun getValue(context: TemplateContext, token: Token?, segments: List<String>, expression: String?) =

@@ -20,8 +20,12 @@ repositories {
 }
 
 dependencies {
-    compile 'javax.mail:mail:1.4.7'
     compile "org.jetbrains.kotlin:kotlin-stdlib:${project.ext.kotlin_version}"
+    compile 'org.springframework:spring-context:4.0.3.RELEASE'
+    compile 'org.springframework:spring-beans:4.0.3.RELEASE'
+    compile 'org.springframework:spring-core:4.0.3.RELEASE'
+    compile 'org.springframework:spring-expression:4.0.3.RELEASE'
+    compile 'javax.mail:mail:1.4.7'
     compile 'com.googlecode.json-simple:json-simple:1.1.1'
     compile 'com.floreysoft:jmte:3.0'
     compile 'org.slf4j:slf4j-api:1.7.5'

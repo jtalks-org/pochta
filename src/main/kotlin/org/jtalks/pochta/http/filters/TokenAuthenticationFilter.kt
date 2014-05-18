@@ -3,19 +3,20 @@ package org.jtalks.pochta.http.filters
 import com.sun.net.httpserver.Filter
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.util.Context
-import org.jtalks.pochta.config.ConfigLoader
 import org.jtalks.pochta.http.ModelAndView
 import org.jtalks.pochta.http.controllers.writeResponse
 import org.jtalks.pochta.util.logWarn
+import org.jtalks.pochta.config.Config
 
-object TokenAuthenticationFilter : Filter() {
+class TokenAuthenticationFilter(val config: Config) : Filter() {
 
     override fun description() = "Token autentication filter"
 
     override fun doFilter(exchange: HttpExchange?, chain: Filter.Chain?) {
         Context.remove(Context.PASSWORD)
         val uri = exchange?.getRequestURI().toString()
-        ConfigLoader.config.mailboxes.filter {(mbox) -> uri.contains("token=${mbox.password}") }
+        config.mailboxes
+                .filter {(mbox) -> uri.contains("token=${mbox.password}") }
                 .forEach {(mbox) -> Context.put(Context.PASSWORD, mbox.password); }
         if (Context.contains(Context.PASSWORD)) {
             chain?.doFilter(exchange)

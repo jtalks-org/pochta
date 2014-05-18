@@ -4,12 +4,13 @@ import java.net.ServerSocket
 import java.net.InetSocketAddress
 import javax.net.ssl.SSLServerSocketFactory
 import org.jtalks.pochta.config.Config
+import org.jtalks.pochta.store.Mailboxes
 
 /**
  * TLS-secured SMTP server implementation.
  * It requires client connections to start with a handshake.
  */
-class SmtpsMailServer(configuration: Config) : SmtpMailServer(configuration){
+class SmtpsMailServer(configuration: Config, store: Mailboxes) : SmtpMailServer(configuration, store){
 
     {
         setEnableTLS(false) // disable STARTTLS, it makes no sense here

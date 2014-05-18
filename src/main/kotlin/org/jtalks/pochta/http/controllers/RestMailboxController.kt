@@ -6,13 +6,12 @@ import org.json.simple.JSONObject
 import org.jtalks.pochta.http.controllers
 import org.jtalks.pochta.store.Mailboxes
 
-object RestMailboxController : Controller {
+class RestMailboxController(val store: Mailboxes) : Controller {
 
     override fun process(exchange: HttpExchange) {
         exchange.setContentType("application/json")
-        exchange.writeResponse(200, getMailListJson())
+        exchange.writeResponse(200, mailListJson())
     }
 
-    private fun getMailListJson(): String =
-            Mailboxes.byContextPassword()?.map{(e) -> e.asJson() }?.asJsonArray().toString()
+    private fun mailListJson() = store.byContextPassword()?.map{(e) -> e.asJson() }?.asJsonArray().toString()
 }

@@ -11,6 +11,7 @@ import org.subethamail.smtp.MessageHandler
 import org.jtalks.pochta.config.Config
 import org.jtalks.pochta.config.Config.Smtp.AuthType.*
 import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.*
+import org.jtalks.pochta.store.Mailboxes
 
 /**
  * SMTP mail server implementation.
@@ -19,7 +20,7 @@ import org.jtalks.pochta.config.Config.Smtp.TransportSecurity.*
  * <p> Call start() to launch the server and start listening for connections
  * <p> Call stop() to disable the server (it's not supposed to be started again)
  */
-open class SmtpMailServer(val config: Config) : SMTPServer(null), MessageHandlerFactory {
+open class SmtpMailServer(val config: Config, val store: Mailboxes) : SMTPServer(null), MessageHandlerFactory {
 
     {
         setPort(config.smtp.port)
@@ -62,5 +63,5 @@ open class SmtpMailServer(val config: Config) : SMTPServer(null), MessageHandler
     /**
      * Captures all incoming e-mails and forwards it into MailStoreComponent implementation
      */
-    override fun create(ctx: MessageContext?): MessageHandler = MailSession(ctx)
+    override fun create(ctx: MessageContext?): MessageHandler = MailSession(ctx, store)
 }

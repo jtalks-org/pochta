@@ -8,10 +8,10 @@ import org.json.simple.JSONObject
 /**
  *
  */
-object RestMailController: Controller {
+class RestMailController(val store: Mailboxes): Controller {
 
     override fun process(exchange: HttpExchange) {
-        val mail = Mailboxes.byContextPassword()?.byId(exchange.getRequestedId())
+        val mail = store.byContextPassword()?.byId(exchange.getRequestedId())
         if (mail == null) {
             exchange.writeResponse(404);
         } else {

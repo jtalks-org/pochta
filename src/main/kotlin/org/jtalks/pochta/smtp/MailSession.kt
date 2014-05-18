@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger
  *  SMTP envelope information and client data (ip, etc). For every mail received
  *  one MailSession object is created.
  */
-public class MailSession(val context: MessageContext?) : MessageHandler {
+public class MailSession(val context: MessageContext?, val store: Mailboxes) : MessageHandler {
 
     public val id : Int = IdGenerator.next()
     public var receivedDate: Date? = null
@@ -42,7 +42,7 @@ public class MailSession(val context: MessageContext?) : MessageHandler {
 
     override fun done() {
         receivedDate = Date()
-        Mailboxes.byContextPassword()?.add(this)
+        store.byContextPassword()?.add(this)
     }
 
     public fun getRawMessage(): String {

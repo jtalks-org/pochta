@@ -3,23 +3,24 @@ package org.jtalks.pochta.store
 import org.jtalks.pochta.smtp.MailSession
 import java.util.concurrent.ArrayBlockingQueue
 import org.jtalks.pochta.util.Context
-import org.jtalks.pochta.config.ConfigLoader
+import org.jtalks.pochta.config.ConfigProvider
 import org.jtalks.pochta.config.Config
 import java.util.LinkedHashMap
+import org.springframework.stereotype.Component
+import org.springframework.beans.factory.annotation.Autowired
 
 /**
  * Mailbox is an incoming mail in-memory storage. Each mailbox has
  * a limit on how many mails it can hold. When overflowed mailbox
  * acts like FIFO-cache: oldest entries are removed first.
  */
-object Mailboxes: Iterable<Mailbox> {
+Component class Mailboxes [Autowired] (val configProvider: ConfigProvider): Iterable<Mailbox> {
 
     private val mailboxes: Map<String, Mailbox>;
 
     {
         val mboxes = LinkedHashMap<String, Mailbox>();
-        val config = ConfigLoader.config.mailboxes
-        config.forEach {(mbox) ->
+        configProvider.config.mailboxes.forEach {(mbox) ->
             mboxes.put(mbox.password, Mailbox(mbox)
             )
         }

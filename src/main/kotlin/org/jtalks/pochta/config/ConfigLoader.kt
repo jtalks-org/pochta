@@ -11,14 +11,16 @@ import org.jtalks.pochta.util.logInfo
 import org.slf4j.LoggerFactory
 import ch.qos.logback.classic.Level
 import org.slf4j.Logger
+import org.springframework.stereotype.Component
 
 /**
  * Loads application configuration from .properties file
  */
-public object ConfigLoader {
+
+Component class ConfigLoader : ConfigProvider {
 
     private val configFile = File("${System.getProperty("user.home")}/.pochta/config.properties")
-    public val config: Config;
+    override public val config: Config;
 
     {
         if (!configFile.exists()) {
