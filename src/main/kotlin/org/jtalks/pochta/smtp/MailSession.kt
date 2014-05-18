@@ -9,23 +9,24 @@ import java.io.InputStream
 import javax.mail.Session
 import java.util.Properties
 import java.io.ByteArrayOutputStream
-import org.jtalks.pochta.store.Mailboxes
 import java.util.concurrent.atomic.AtomicInteger
+import org.jtalks.pochta.store.Email
+import org.jtalks.pochta.store.MailStore
 
 /**
  *  Represents a single mail transfer conversation. This includes email itself,
  *  SMTP envelope information and client data (ip, etc). For every mail received
  *  one MailSession object is created.
  */
-public class MailSession(val context: MessageContext?, val store: Mailboxes) : MessageHandler {
+public class MailSession(val context: MessageContext?, val store: MailStore) : MessageHandler, Email {
 
-    public val id : Int = IdGenerator.next()
-    public var receivedDate: Date? = null
-    public var envelopeFrom: String? = null
-    public var envelopeRecipients: ArrayList<String> = ArrayList<String>()
-    public var message: MimeMessage? = null
-    public val ip: String = context?.getRemoteAddress().toString()
-    public var subject: String? = null
+    override val id = IdGenerator.next()
+    override var receivedDate: Date? = null
+    override var envelopeFrom: String? = null
+    override var envelopeRecipients = ArrayList<String>()
+    override var message: MimeMessage? = null
+    override val ip = context?.getRemoteAddress().toString()
+    override var subject: String? = null
 
     override fun from(from: String?) {
         envelopeFrom = from
@@ -45,7 +46,7 @@ public class MailSession(val context: MessageContext?, val store: Mailboxes) : M
         store.byContextPassword()?.add(this)
     }
 
-    public fun getRawMessage(): String {
+    override fun getRawMessage(): String {
         val stream = ByteArrayOutputStream()
         message?.writeTo(stream)
         return String(stream.toByteArray())

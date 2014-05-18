@@ -1,14 +1,12 @@
 package org.jtalks.pochta.http.controllers
 
 import com.sun.net.httpserver.HttpExchange
-import org.jtalks.pochta.store.Mailboxes
-import org.jtalks.pochta.smtp.MailSession
-import org.json.simple.JSONObject
+import org.jtalks.pochta.store.MailStore
 
 /**
  *
  */
-class RestMailController(val store: Mailboxes): Controller {
+class RestMailController(val store: MailStore): Controller {
 
     override fun process(exchange: HttpExchange) {
         val mail = store.byContextPassword()?.byId(exchange.getRequestedId())

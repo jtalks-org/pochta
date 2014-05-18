@@ -13,15 +13,15 @@ import com.sun.net.httpserver.Filter
 import org.jtalks.pochta.http.controllers.RestMailController
 import org.jtalks.pochta.util.logInfo
 import org.jtalks.pochta.config.Config
-import org.jtalks.pochta.store.Mailboxes
 import org.springframework.stereotype.Component
 import org.jtalks.pochta.config.ConfigProvider
+import org.jtalks.pochta.store.MailStore
 import org.springframework.beans.factory.annotation.Autowired
 
 /**
  * Simple HTTP server used for web UI and REST service endpoints
  */
-Component class HttpServer [Autowired] (configProvider: ConfigProvider, val store: Mailboxes) {
+Component class HttpServer [Autowired] (configProvider: ConfigProvider, val store: MailStore) {
 
     val server = com.sun.net.httpserver.HttpServer.create()!!
 

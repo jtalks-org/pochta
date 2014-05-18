@@ -1,12 +1,9 @@
 package org.jtalks.pochta.http.controllers
 
 import com.sun.net.httpserver.HttpExchange
-import org.jtalks.pochta.smtp.MailSession
-import org.json.simple.JSONObject
-import org.jtalks.pochta.http.controllers
-import org.jtalks.pochta.store.Mailboxes
+import org.jtalks.pochta.store.MailStore
 
-class RestMailboxController(val store: Mailboxes) : Controller {
+class RestMailboxController(val store: MailStore) : Controller {
 
     override fun process(exchange: HttpExchange) {
         exchange.setContentType("application/json")

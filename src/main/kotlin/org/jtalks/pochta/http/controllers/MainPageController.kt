@@ -2,11 +2,11 @@ package org.jtalks.pochta.http.controllers
 
 import com.sun.net.httpserver.HttpExchange
 import org.jtalks.pochta.http.ModelAndView
-import org.jtalks.pochta.store.Mailboxes
 import java.util.concurrent.TimeUnit
 import org.jtalks.pochta.config.Config
+import org.jtalks.pochta.store.MailStore
 
-class MainPageController(val config: Config, val store: Mailboxes) : Controller {
+class MainPageController(val config: Config, val store: MailStore) : Controller {
 
     override fun process(exchange: HttpExchange) {
         exchange.writeResponse(200,
