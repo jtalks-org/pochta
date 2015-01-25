@@ -46,7 +46,7 @@ public class MailSession(val context: MessageContext?, val store: MailStore) : M
         store.byContextPassword()?.add(this)
     }
 
-    override fun getRawMessage(): String {
+    override fun getMessage(): String {
         val stream = ByteArrayOutputStream()
         message?.writeTo(stream)
         return String(stream.toByteArray())

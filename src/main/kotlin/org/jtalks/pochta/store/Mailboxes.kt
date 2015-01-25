@@ -40,11 +40,11 @@ class InMemoryMailbox(val config: Config.MailboxConfig) : Mailbox {
         synchronized(mails) {
             if (mails.remainingCapacity() == 0) mails.take()
             mails.add(message)
-            size = mails.size
+            size = mails.size()
         }
     }
 
-    override fun byId(id : Int) = mails.filter{(mail) -> mail.id == id}.first
+    override fun byId(id : Int) = mails.filter{(mail) -> mail.id == id}.first()
 
     override fun size() = mails.size()
 

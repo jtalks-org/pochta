@@ -12,6 +12,7 @@ function mailListOnClick(e) {
     $.get(e.target.href +  document.location.search) //preserving auth token from referrer
         .success(function(data) {
             $('#mail-body').html(data.mail_body.split('\n').join('<br>'));
+            $('#mail-body-raw').html(data.mail_body_raw.split('\n').join('<br>'));
             $('#sender').text(data.envelope_from);
             $('#recipients').text(data.envelope_recipients);
             $('#date').text(data.delivery_date);

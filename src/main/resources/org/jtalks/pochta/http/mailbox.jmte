@@ -40,9 +40,15 @@
         </table>
     </div>
     <div class="panel panel-default">
-        <div class="panel-heading"><i class="stat-icon glyphicon glyphicon-envelope"></i> Mail as text</div>
+        <div class="panel-heading"><i class="stat-icon glyphicon glyphicon-envelope"></i> Decoded mail as text</div>
         <div class="panel-body">
             <p id="mail-body">Choose a mail on the left to view it's content here</p>
         </div>
     </div>
+    <div class="panel panel-default">
+            <div class="panel-heading"><i class="stat-icon glyphicon glyphicon-envelope"></i> Raw mail data</div>
+            <div class="panel-body">
+                <p id="mail-body-raw">Choose a mail on the left to view it's content here</p>
+            </div>
+        </div>
 </div>

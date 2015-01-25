@@ -17,5 +17,5 @@ public trait Email {
     val ip: String
     var subject: String?
 
-    fun getRawMessage(): String
+    fun getMessage(): String
 }

@@ -12,6 +12,11 @@ import javax.mail.Transport
  *  Simple testing utility to send mails
  */
 public fun main(args: Array<String>) {
+    Transport.send(b64Mail())
+    System.out.println("Sent message successfully....")
+}
+
+fun plainMail(): MimeMessage {
     val to = "abcd@gmail.com"
     val from = "web@gmail.com"
     val properties = System.getProperties()
@@ -23,16 +28,16 @@ public fun main(args: Array<String>) {
             return PasswordAuthentication("user", "secret")
         }
     })
-    try {
-        val message = MimeMessage(session)
-        message.setFrom(InternetAddress(from))
-        message.addRecipient(Message.RecipientType.TO, InternetAddress(to))
-        message.setSubject("This is the long  long long long long long long longSubject Line!")
-        message.setText("This is actual message")
-        Transport.send(message)
-        System.out.println("Sent message successfully....")
-    } catch (mex: MessagingException) {
-        mex.printStackTrace()
-    }
+    val message = MimeMessage(session)
+    message.setFrom(InternetAddress(from))
+    message.addRecipient(Message.RecipientType.TO, InternetAddress(to))
+    message.setSubject("This is the long  long long long long long long longSubject Line!")
+    message.setText("This is actual message")
+    return message
+}
 
+fun b64Mail(): MimeMessage{
+    val message = plainMail()
+    message.setHeader( "Content-Transfer-Encoding", "base64" );
+    return message
 }
