@@ -14,5 +14,26 @@ public class SampleSpecs : Spek() {{
                 assertEquals("ololo", value)
             }
         }
+        on("uppercasing") {
+            val value = string.toUpperCase()
+            it("should result in a string with uppercased chars only") {
+                assertEquals("OLOLO", value)
+            }
+        }
+    }
+
+    given("A string with default locale settings") {
+        var string = "OloLo"
+        on("lowercasing") {
+            string = string.toLowerCase()
+            it("should result in a string with lowercased chars only") {
+                assertEquals("ololo", string)
+            }
+        }
+        on("uppercasing") {
+            it("should result in a string with uppercased chars only") {
+                assertEquals("OloLo", string)
+            }
+        }
     }
 }}
