@@ -21,19 +21,4 @@ public class SampleSpecs : Spek() {{
             }
         }
     }
-
-    given("A string with default locale settings") {
-        var string = "OloLo"
-        on("lowercasing") {
-            string = string.toLowerCase()
-            it("should result in a string with lowercased chars only") {
-                assertEquals("ololo", string)
-            }
-        }
-        on("uppercasing") {
-            it("should result in a string with uppercased chars only") {
-                assertEquals("OloLo", string)
-            }
-        }
-    }
 }}
